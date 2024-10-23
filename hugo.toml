@@ -1,0 +1,13 @@
+baseURL = 'https://linzere0.github.io'
+languageCode = 'ru'
+title = 'linar.dev'
+languageName = 'ru'
+theme = ["reveal-hugo"]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true
