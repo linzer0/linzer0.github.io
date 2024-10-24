@@ -2,7 +2,17 @@ baseURL = 'https://linzere0.github.io'
 languageCode = 'ru'
 title = 'linar.dev'
 languageName = 'ru'
-theme = ["reveal-hugo"]
+theme = ["PaperMod"]
+
+enableRobotsTXT = true
+
+[params]
+defaultTheme = "auto"
+[profileMode]
+enabled = true
+title = "Config title"
+subtitle = "World is error"
+
 
 [markup.goldmark.renderer]
 unsafe = true

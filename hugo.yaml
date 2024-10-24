@@ -1,0 +1,29 @@
+baseURL: "https://linzer0.github.io/"
+title: linar.dev 
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  profileMode:
+    enabled: true
+    title: "Linar Khilazhev" 
+    subtitle: "Game Programmer."
+    imageUrl: "https://avatars.githubusercontent.com/u/17702351?s=400&u=8ece8ac6fad54b7f27e0c79627454f23c74823ac&v=4"
+    imageTitle: "why are you here?" 
+    imageWidth: 200 
+    imageHeight: 200 
+
+  socialIcons: 
+    - name: github-simple
+      url: "https://github.com/linzer0"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/linar-khilazhev/"
