@@ -33,6 +33,8 @@ languages:
           weight: 10
 
 params:
+  ShowReadingTime : true
+  ShowToc : true
   profileMode:
     enabled: true
     title: "Linar Khilazhev" 
