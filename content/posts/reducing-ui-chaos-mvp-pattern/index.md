@@ -8,7 +8,7 @@ title = 'Reducing UI Chaos Mvp Pattern'
 
 Separating code to rule in interface development!
 
-![That's how it works](/static/images/reducing-ui-chaos-mvp-pattern/0.png)
+![That's how it works](0.png)
 
 ## General Information
 
@@ -36,7 +36,7 @@ For simplicity and clarity, I constructed a class diagram to show the relationsh
 
 For example, we see that **ProfilePresenter** acts as a link between **ProfileModel** and **ProfileView**.
 
-![Class diagram of the player profile](/static/images/reducing-ui-chaos-mvp-pattern/1.png)
+![Class diagram of the player profile](1.png)
 
 Class diagram of the player profile.
 
@@ -186,7 +186,7 @@ With the MVP structure and logic understood, how will it look in Unity?
 
 It’s quite simple. We will create the needed elements lazily, i.e., the first time we access them.
 
-![Entities present in the scene](/static/images/reducing-ui-chaos-mvp-pattern/2.png)
+![Entities present in the scene](2.png)
 
 Entities present in the scene.
 
@@ -249,21 +249,21 @@ namespace Organization {
 
 Now let's look at the **ProfileView**, which we retrieve from the Resources folder.
 
-![Prefab hierarchy](/static/images/reducing-ui-chaos-mvp-pattern/3.png)
+![Prefab hierarchy](3.png)
 
 Prefab hierarchy.
 
-![Components on the parent prefab ProfileView](/static/images/reducing-ui-chaos-mvp-pattern/4.png)
+![Components on the parent prefab ProfileView](4.png)
 
-![Child element PlayerLevel with TextMeshPro component](/static/images/reducing-ui-chaos-mvp-pattern/4.1.png)
+![Child element PlayerLevel with TextMeshPro component](4.1.png)
 
-![PlayerName also has a TextMeshPro component and is a child](/static/images/reducing-ui-chaos-mvp-pattern/4.2.png)
+![PlayerName also has a TextMeshPro component and is a child](4.2.png)
 
 ## Conclusion
 
 When the game is launched, **ProfileView** is created on the scene, displaying data from **ProfileModel**.
 
-![ProfileView display](/static/images/reducing-ui-chaos-mvp-pattern/5.png)
+![ProfileView display](5.png)
 
 ProfileView display.
 
