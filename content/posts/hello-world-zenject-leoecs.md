@@ -21,7 +21,7 @@ Right Click inside the Hierarchy tab and select `Zenject -> Scene Context`
 Now, create three scripts: `StartupInstaller`, `StartupSystemsExecutor`, `HelloWorldSystem`.
 
 **StartupInstaller** will bind our Systems and EcsWorld to DI-container.
-```
+```csharp
 using Leopotam.Ecs;
 using Zenject;
 
@@ -42,7 +42,7 @@ public class StartupInstaller : MonoInstaller
 
 **StartupSystemsExecutor** will `Init()` and `Run()` binded systems.
 
-```
+```csharp
 using System;
 using Leopotam.Ecs;
 using Zenject;
