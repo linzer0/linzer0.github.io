@@ -1,7 +1,7 @@
 +++
 date = '2024-10-27T15:32:11+07:00'
 draft = false
-title = 'Reducing UI Chaos Mvp Pattern'
+title = 'Reducing UI chaos: MVP pattern'
 +++
 
 # Reducing UI Chaos: The MVP Pattern
