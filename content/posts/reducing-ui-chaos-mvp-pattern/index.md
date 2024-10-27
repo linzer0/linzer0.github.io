@@ -1,6 +1,6 @@
 +++
 date = '2024-10-27T15:32:11+07:00'
-draft = true
+draft = false
 title = 'Reducing UI Chaos Mvp Pattern'
 +++
 
