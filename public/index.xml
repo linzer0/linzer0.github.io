@@ -6,8 +6,22 @@
     <description>Recent content on linar.dev</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Oct 2024 14:56:20 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 27 Oct 2024 15:32:11 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reducing UI Chaos Mvp Pattern</title>
+      <link>http://localhost:1313/posts/reducing-ui-chaos-mvp-pattern/</link>
+      <pubDate>Sun, 27 Oct 2024 15:32:11 +0700</pubDate>
+      <guid>http://localhost:1313/posts/reducing-ui-chaos-mvp-pattern/</guid>
+      <description>&lt;h1 id=&#34;reducing-ui-chaos-the-mvp-pattern&#34;&gt;Reducing UI Chaos: The MVP Pattern&lt;/h1&gt;
+&lt;p&gt;Separating code to rule in interface development!&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:1313/static/images/reducing-ui-chaos-mvp-pattern/0.png&#34; alt=&#34;That&amp;rsquo;s how it works&#34;  /&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;general-information&#34;&gt;General Information&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;MVP&lt;/strong&gt; (Model, View, Presenter) is a UI design pattern from the MV* family (which also includes MVC and MVVM).&lt;/p&gt;
+&lt;p&gt;These approaches are characterized by a strict separation of logic, data, and visual representations, making it easy to scale and develop interfaces.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re involved in interface creation and programming logic, you&amp;rsquo;ve probably heard something about them.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hello World Zenject Leoecs</title>
       <link>http://localhost:1313/posts/hello-world-zenject-leoecs/</link>
@@ -33,21 +47,6 @@ Right Click inside the Hierarchy tab and select &lt;code&gt;Zenject -&amp;gt; Sc
 &lt;p&gt;Here, I&amp;rsquo;ll be sharing insights, tips, and my journey in the world of game development.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Stay tuned for updates, technical deep dives, and everything in between&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Let’s create something amazing together!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/reducing_ui_chaos_mvp_pattern/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/reducing_ui_chaos_mvp_pattern/</guid>
-      <description>&lt;h1 id=&#34;reducing-ui-chaos-the-mvp-pattern&#34;&gt;Reducing UI Chaos: The MVP Pattern&lt;/h1&gt;
-&lt;p&gt;Separating code to rule in interface development!&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://leonardo.osnova.io/fc56bcc7-f3d7-5e19-acd7-4606f2fb0b1f/-/preview/592x/&#34; alt=&#34;That&amp;rsquo;s how it works&#34;  /&gt;
-&lt;/p&gt;
-&lt;p&gt;That&amp;rsquo;s how it works.&lt;/p&gt;
-&lt;h2 id=&#34;general-information&#34;&gt;General Information&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;MVP&lt;/strong&gt; (Model, View, Presenter) is a UI design pattern from the MV* family (which also includes MVC and MVVM).&lt;/p&gt;
-&lt;p&gt;These approaches are characterized by a strict separation of logic, data, and visual representations, making it easy to scale and develop interfaces.&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;re involved in interface creation and programming logic, you&amp;rsquo;ve probably heard something about them.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

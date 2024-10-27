@@ -1,7 +1,7 @@
 +++
-date = '2024-10-27T14:56:20+07:00'
-draft = true 
-title = 'Reducing UI Chaos: The MVP Pattern'
+date = '2024-10-27T15:32:11+07:00'
+draft = true
+title = 'Reducing UI Chaos Mvp Pattern'
 +++
 
 # Reducing UI Chaos: The MVP Pattern
@@ -9,8 +9,6 @@ title = 'Reducing UI Chaos: The MVP Pattern'
 Separating code to rule in interface development!
 
 ![That's how it works](/static/images/reducing-ui-chaos-mvp-pattern/0.png)
-
-That's how it works.
 
 ## General Information
 
@@ -272,3 +270,4 @@ ProfileView display.
 I’ll also leave a link to the code repository:
 
 [GitHub - linzer0/interface-pattern-mvp](https://api.dtf.ru/v2.8/)
+
