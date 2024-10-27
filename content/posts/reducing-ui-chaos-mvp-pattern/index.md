@@ -253,11 +253,9 @@ Now let's look at the **ProfileView**, which we retrieve from the Resources fold
 
 Prefab hierarchy.
 
-![Components on the parent prefab ProfileView](4.png)
-
-![Child element PlayerLevel with TextMeshPro component](4.1.png)
-
-![PlayerName also has a TextMeshPro component and is a child](4.2.png)
+| Components on the parent prefab ProfileView | Child element PlayerLevel with TextMeshPro component | PlayerName also has a TextMeshPro component and is a child |
+|---------------------------------------------|------------------------------------------------------|------------------------------------------------------------|
+| ![alt](4.png)                               | ![alt](4.1.png)                                      | ![alt](4.2.png)                                            |
 
 ## Conclusion
 
@@ -265,9 +263,7 @@ When the game is launched, **ProfileView** is created on the scene, displaying d
 
 ![ProfileView display](5.png)
 
-ProfileView display.
+I’ll also leave a link to the code [repository](https://github.com/linzer0/interface-pattern-mvp).
 
-I’ll also leave a link to the code repository:
-
-[GitHub - linzer0/interface-pattern-mvp](https://api.dtf.ru/v2.8/)
+See you later.
 
