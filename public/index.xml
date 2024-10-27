@@ -6,15 +6,33 @@
     <description>Recent content on linar.dev</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 25 Oct 2024 13:34:00 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 27 Oct 2024 14:56:20 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World Zenject Leoecs</title>
+      <link>http://localhost:1313/posts/hello-world-zenject-leoecs/</link>
+      <pubDate>Sun, 27 Oct 2024 14:56:20 +0700</pubDate>
+      <guid>http://localhost:1313/posts/hello-world-zenject-leoecs/</guid>
+      <description>&lt;h1 id=&#34;how-to-write-hello-world-using-leoecs--zenject&#34;&gt;How to write Hello World using LeoEcs &amp;amp; Zenject&lt;/h1&gt;
+&lt;h2 id=&#34;preparation&#34;&gt;Preparation&lt;/h2&gt;
+&lt;p&gt;Firstly, we need to install &lt;a href=&#34;https://github.com/modesttree/Zenject&#34;&gt;Zenject&lt;/a&gt; and &lt;a href=&#34;https://github.com/Leopotam/ecs&#34;&gt;LeoEcs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;LeoEcs has two versions, one based on structures and one based on classes.
+Within the framework of this tutorial, it makes no difference which one to use, I will use the version on structures.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;After installation, we need to create &lt;strong&gt;Scene Context&lt;/strong&gt; in our Scene.
+Right Click inside the Hierarchy tab and select &lt;code&gt;Zenject -&amp;gt; Scene Context&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Fri, 25 Oct 2024 13:34:00 +0700</pubDate>
       <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;h2 id=&#34;hello-everyone&#34;&gt;Hello everyone!&lt;/h2&gt;
-&lt;p&gt;It&amp;rsquo;s my &lt;strong&gt;first&lt;/strong&gt; hugo post.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello, World!&lt;/h1&gt;
+&lt;p&gt;Welcome to my blog!&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m Linar, a Unity Developer with a passion for creating engaging and optimized gaming experiences.&lt;/p&gt;
+&lt;p&gt;Here, I&amp;rsquo;ll be sharing insights, tips, and my journey in the world of game development.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stay tuned for updates, technical deep dives, and everything in between&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s create something amazing together!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
