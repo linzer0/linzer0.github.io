@@ -2,13 +2,16 @@
 date = '2024-10-27T15:32:11+07:00'
 draft = false
 title = 'Reducing UI chaos: MVP pattern'
+description = "Separating code to rule in interface development!"
+hideSummary = true
+[cover]
+    image= "0.png"
+    alt= "The alt text"
+    caption= ""
+    relative= false
+    width = 200
+    height = 200
 +++
-
-# Reducing UI Chaos: The MVP Pattern
-
-Separating code to rule in interface development!
-
-![That's how it works](0.png)
 
 ## General Information
 

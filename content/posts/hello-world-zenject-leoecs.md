@@ -2,6 +2,7 @@
 date = '2024-10-27T14:56:20+07:00'
 draft = false 
 title = 'Hello World Zenject Leoecs'
+hideSummary = true
 +++
 
 # How to write Hello World using LeoEcs & Zenject

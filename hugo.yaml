@@ -33,6 +33,7 @@ languages:
           weight: 10
 
 params:
+  favicon: "favicon.ico"
   ShowReadingTime : true
   ShowToc : true
   profileMode:

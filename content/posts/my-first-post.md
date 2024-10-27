@@ -2,6 +2,7 @@
 date = '2024-10-25T13:34:00+07:00'
 draft = false 
 title = 'My First Post'
+hideSummary = true
 +++
 
 # Hello, World!
