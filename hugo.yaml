@@ -22,15 +22,15 @@ languages:
       series: series
     menu:
       main:
-        - name: Archive
-          url: archives
+        - name: About
+          url: about/
           weight: 5
         - name: Posts
           url: posts/
           weight: 10
-        - name: Tags
-          url: tags/
-          weight: 10
+        - name: Archive
+          url: archives
+          weight: 15
 
 params:
   favicon: "favicon.ico"

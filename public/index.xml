@@ -61,5 +61,12 @@ Right Click inside the Hierarchy tab and select &lt;code&gt;Zenject -&amp;gt; Sc
 &lt;p&gt;&lt;strong&gt;Stay tuned for updates, technical deep dives, and everything in between&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Let’s create something amazing together!&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>about</description>
+    </item>
   </channel>
 </rss>
