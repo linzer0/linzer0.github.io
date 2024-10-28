@@ -370,3 +370,7 @@ By default, after creating a project, the [Linear color space](https://docs.unit
 If you switch to Gamma, everything will fall into place, and it will come to life with new colors:
 
 ![alt](10.png)
+
+## Chapter 3: Conclusion
+
+And he lived happily ever after until the end of his days.
