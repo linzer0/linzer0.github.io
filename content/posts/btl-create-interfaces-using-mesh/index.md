@@ -4,10 +4,10 @@ draft = false
 title = 'Between The Lines: Create Interfaces Using Mesh'
 hideSummary = true
 [cover]
-    image= "0.png"
-    alt= "The alt text"
-    caption= ""
-    relative= false
+    image = "0.png"
+    alt = "The alt text"
+    caption = ""
+    relative = false
 +++
 
 # Divide and conquer User Interface in Unity

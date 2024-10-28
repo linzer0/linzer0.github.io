@@ -5,12 +5,10 @@ title = 'Reducing UI chaos: MVP pattern'
 description = "Separating code to rule in interface development!"
 hideSummary = true
 [cover]
-    image= "0.png"
-    alt= "The alt text"
-    caption= ""
-    relative= false
-    width = 200
-    height = 200
+    image = "0.png"
+    alt = "The alt text"
+    caption = ""
+    relative = false
 +++
 
 ## General Information
