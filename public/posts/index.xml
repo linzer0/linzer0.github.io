@@ -6,8 +6,28 @@
     <description>Recent content in Posts on linar.dev</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Oct 2024 15:32:11 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 28 Oct 2024 11:12:23 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Between The Lines: Create Interfaces Using Mesh</title>
+      <link>http://localhost:1313/posts/btl-create-interfaces-using-mesh/</link>
+      <pubDate>Mon, 28 Oct 2024 11:12:23 +0700</pubDate>
+      <guid>http://localhost:1313/posts/btl-create-interfaces-using-mesh/</guid>
+      <description>&lt;h1 id=&#34;divide-and-conquer-user-interface-in-unity&#34;&gt;Divide and conquer User Interface in Unity&lt;/h1&gt;
+&lt;p&gt;I tell you how to create custom UI elements through Mesh creation using &lt;strong&gt;Unity&lt;/strong&gt; and &lt;strong&gt;UI Toolkit&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;what-do-we-do&#34;&gt;What do we do?&lt;/h2&gt;
+&lt;p&gt;Within the framework of this article, we will analyze the possibilities of generating custom UI elements using the &lt;strong&gt;UI Toolkit&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;First, we&amp;rsquo;ll take a closer look at creating a triangle based on mash generation, and second - a gradient rhombus!&lt;/p&gt;
+&lt;h2 id=&#34;chapter-1-mesh-and-triangle&#34;&gt;Chapter 1: Mesh and Triangle!&lt;/h2&gt;
+&lt;p&gt;Within this chapter, let&amp;rsquo;s look at how to make a custom triangle element, as well as tell you in general how this system works.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Between The Lines: Creating Interface Elements Using Vector Api</title>
+      <link>http://localhost:1313/posts/btl-creating-interface-elements-using-vector-api/</link>
+      <pubDate>Mon, 28 Oct 2024 11:05:11 +0700</pubDate>
+      <guid>http://localhost:1313/posts/btl-creating-interface-elements-using-vector-api/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Reducing UI chaos: MVP pattern</title>
       <link>http://localhost:1313/posts/reducing-ui-chaos-mvp-pattern/</link>
