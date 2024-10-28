@@ -22,6 +22,9 @@ languages:
       series: series
     menu:
       main:
+        - name: Portfolio
+          url: portfolio/
+          weight: 0
         - name: About
           url: about/
           weight: 5
@@ -39,7 +42,7 @@ params:
   profileMode:
     enabled: true
     title: "Linar Khilazhev" 
-    subtitle: "Game Programmer."
+    subtitle: "Game Programmer"
     imageUrl: "https://avatars.githubusercontent.com/u/17702351?s=400&u=8ece8ac6fad54b7f27e0c79627454f23c74823ac&v=4"
     imageTitle: "why are you here?" 
     imageWidth: 200 
