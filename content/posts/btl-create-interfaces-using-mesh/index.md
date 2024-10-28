@@ -240,9 +240,8 @@ Then, through the SetAllVertices() method, we define our vertices, and through S
 
 And voilà! We've got ourselves a triangle:
 
-[](5.mov)
 
-
+{{< video src="5.webm" type="video/webm" preload="auto" >}}
 
 
 ## Chapter 2: Diamond and Gradient!
