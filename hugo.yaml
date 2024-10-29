@@ -22,16 +22,16 @@ languages:
       series: series
     menu:
       main:
-        - name: Portfolio
+        - name: Portfolio 🕹️
           url: portfolio/
           weight: 0
-        - name: About
+        - name: About 👋
           url: about/
           weight: 5
-        - name: Posts
+        - name: Posts 📰
           url: posts/
           weight: 10
-        - name: Archive
+        - name: Archive 🗂️
           url: archives
           weight: 15
 
@@ -42,7 +42,7 @@ params:
   profileMode:
     enabled: true
     title: "Linar Khilazhev" 
-    subtitle: "Game Programmer"
+    subtitle: "Rᴇᴅᴜᴄɪɴɢ ᴇɴᴛʀᴏᴘʏ • 𝗨𝗻𝗶𝘁𝘆 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 • 𝕌𝕤𝕖𝕣 𝕀𝕟𝕥𝕖𝕣𝕗𝕒𝕔𝕖 𝕄𝕒𝕤𝕥𝕖𝕣"
     imageUrl: "https://avatars.githubusercontent.com/u/17702351?s=400&u=8ece8ac6fad54b7f27e0c79627454f23c74823ac&v=4"
     imageTitle: "why are you here?" 
     imageWidth: 200 
