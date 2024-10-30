@@ -19,6 +19,15 @@ Heroes of Artadis is a free-to-play turn-based online strategy with CCG elements
 The game combines the elements of a collectible card game and classic strategy.  
 About my results on this project:
 
+
+{{< unity-webgl-player
+gameTitle="Avel"
+width="500"
+height="576"
+buildURL="UnrailedLike/Build"
+buildFileName="UnrailedLike"
+playerID=""  >}}
+
 ### Game Logic
 
 *   Implemented 20+ daily and seasonal challenges
