@@ -21,9 +21,9 @@ About my results on this project:
 
 
 {{< unity-webgl-player
-gameTitle="Avel"
-width="500"
-height="576"
+gameTitle="UnRailed"
+width="700"
+height="500"
 buildURL="UnrailedLike/Build"
 buildFileName="UnrailedLike"
 playerID=""  >}}
