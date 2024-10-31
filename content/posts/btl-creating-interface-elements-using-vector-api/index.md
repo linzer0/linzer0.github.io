@@ -416,7 +416,7 @@ painter2D.strokeGradient = new Gradient()
 
 Using the `strokeGradient` property you can draw a stroke through a gradient.
 
-## Chapter 5: The Finale!
+## Chapter 5: Conclusions
 
 Congratulations on reading this article to the end.
 
