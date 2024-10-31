@@ -6,8 +6,26 @@
     <description>Recent content in Posts on linar.dev</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Oct 2024 11:12:23 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2024 11:05:11 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Between The Lines: Creating Interface Elements Using Vector Api</title>
+      <link>http://localhost:1313/posts/btl-creating-interface-elements-using-vector-api/</link>
+      <pubDate>Tue, 29 Oct 2024 11:05:11 +0700</pubDate>
+      <guid>http://localhost:1313/posts/btl-creating-interface-elements-using-vector-api/</guid>
+      <description>&lt;p&gt;In the recent past, I&amp;rsquo;ve talked about &lt;a href=&#34;https://dtf.ru/gamedev/2215784-razdelyaem-i-vlastvuem-nad-interfeisami-v-unity&#34;&gt;how you can create your own custom elements through mash generation&lt;/a&gt;, it will be useful to read to understand many aspects of this article.&lt;/p&gt;
+&lt;p&gt;And today, we will be creating custom elements for interfaces, but using the &lt;strong&gt;VectorApi&lt;/strong&gt; in the &lt;strong&gt;UI Toolkit&lt;/strong&gt; of the &lt;strong&gt;Unity&lt;/strong&gt; engine.&lt;/p&gt;
+&lt;p&gt;After reading this article you will learn:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;What is &lt;strong&gt;painter2D&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How to create elements using it&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How to surprise your colleagues with your knowledge of interface creation&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Between The Lines: Create Interfaces Using Mesh</title>
       <link>http://localhost:1313/posts/btl-create-interfaces-using-mesh/</link>
