@@ -1,7 +1,7 @@
 +++
 date = '2024-10-29T11:05:11+07:00'
 draft = false
-title = 'Between The Lines: Creating Interface Elements Using Vector Api'
+title = 'Between The Lines: Creating Interfaces Using Vectors'
 hideSummary = true
 [cover]
     image = "0.png"
