@@ -125,7 +125,7 @@ The four variables `top, left, right, bottom` are needed to simplify the handlin
 
 It is also important to note that these variable values will change depending on the size of the UI element (in UI Builder / build), and because of this our UI element will scale relative to the size of the screen and the element itself.
 
-![alt](https://habrastorage.org/getpro/habr/upload_files/f1c/1f7/d0a/f1c1f7d0a185fc888afbd63acdd9ac07.png "Именно на этом самом contentRect'e и будет происходить наша генерация.")
+![alt](https://habrastorage.org/getpro/habr/upload_files/f1c/1f7/d0a/f1c1f7d0a185fc888afbd63acdd9ac07.png)
 
 It is on this very contentRect that our generation will take place.
 
@@ -152,7 +152,7 @@ Also, it has various properties that affect the result of sketching:
 - lineCap - how the line ends will look like
 
 
-![alt](https://habrastorage.org/getpro/habr/upload_files/8d4/8a3/b35/8d48a3b35d97b1e76172bef6706b4ad1.png "Более наглядно как это выглядит")
+![alt](https://habrastorage.org/getpro/habr/upload_files/8d4/8a3/b35/8d48a3b35d97b1e76172bef6706b4ad1.png)
 
 More clearly how it looks like
 
@@ -222,7 +222,7 @@ painter2D.BezierCurveTo(new Vector2(150, 150), new Vector2(200, 50), new Vector2
 painter2D.Stroke();
 ```
 
-![alt](https://habrastorage.org/getpro/habr/upload_files/e96/5dc/4a2/e965dc4a2213dba9f3d19973cc4a23cd.png "Кривая Безье")
+![alt](https://habrastorage.org/getpro/habr/upload_files/e96/5dc/4a2/e965dc4a2213dba9f3d19973cc4a23cd.png)
 
 Bezier curve
 
@@ -235,7 +235,7 @@ painter2D.QuadraticCurveTo(new Vector2(150, 150), new Vector2(250, 100));
 painter2D.Stroke();
 ```
 
-![alt](https://habrastorage.org/getpro/habr/upload_files/058/b08/55a/058b0855a5dbdb1b7628dc1b816dd59a.png "Квадратичная кривая Безье")
+![alt](https://habrastorage.org/getpro/habr/upload_files/058/b08/55a/058b0855a5dbdb1b7628dc1b816dd59a.png)
 
 Quadratic Bézier curve
 
@@ -276,7 +276,7 @@ painter2D.Stroke();
 
 And `painter2D.FillColor` will define fill color.
 
-![alt](https://habrastorage.org/getpro/habr/upload_files/609/08c/193/60908c1935182d6b22f1d237fd11ffb4.png "Красная обводка и синяя заливка")
+![alt](https://habrastorage.org/getpro/habr/upload_files/609/08c/193/60908c1935182d6b22f1d237fd11ffb4.png)
 
 Red outline and blue fill.
 
@@ -290,7 +290,7 @@ painter2D.LineTo(new Vector2(200, 100));
 painter2D.Stroke();
 ```
 
-![alt](https://habrastorage.org/getpro/habr/upload_files/07f/7b8/629/07f7b862986f28c95b92f16678f1cc67.png "Кривая через дугу")
+![alt](https://habrastorage.org/getpro/habr/upload_files/07f/7b8/629/07f7b862986f28c95b92f16678f1cc67.png)
 
 Curve through arc
 
@@ -337,7 +337,7 @@ painter2D.ClosePath();
 painter2D.Fill(FillRule.OddEven);
 ```
 
-![alt](https://habrastorage.org/getpro/habr/upload_files/da7/a20/d44/da7a20d448dc1c34ff18dd5cc4ee6b0a.png "Прямоугольник с отверстием внутри")
+![alt](https://habrastorage.org/getpro/habr/upload_files/da7/a20/d44/da7a20d448dc1c34ff18dd5cc4ee6b0a.png)
 
 Rectangle with a holes;
 
@@ -397,7 +397,7 @@ private void GenerateVisualContent(MeshGenerationContext mgc)
 }
 ```
 
-![alt](https://habrastorage.org/getpro/habr/upload_files/378/bf4/404/378bf4404732002951c86d2ad1e39220.png "Три разных стиля")
+![alt](https://habrastorage.org/getpro/habr/upload_files/378/bf4/404/378bf4404732002951c86d2ad1e39220.png)
 
 Three different styles.
 
