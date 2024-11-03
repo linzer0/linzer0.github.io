@@ -6,8 +6,20 @@
     <description>Recent content in Posts on linar.dev</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Oct 2024 11:05:11 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 03 Nov 2024 15:09:15 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Between The Lines: Vertex Animations</title>
+      <link>http://localhost:1313/posts/btl-vertex-animations/</link>
+      <pubDate>Sun, 03 Nov 2024 15:09:15 +0700</pubDate>
+      <guid>http://localhost:1313/posts/btl-vertex-animations/</guid>
+      <description>&lt;p&gt;Здравствуйте, уважаемые господа. Меня зовут Линар Хилажев, я программирую логику, интерфейсы и игры.&lt;/p&gt;
+&lt;p&gt;Хочу кое-что интересное рассказать&amp;hellip; значит начались эти события после того как была написана статья &lt;a href=&#34;https://habr.com/ru/articles/803651/&#34;&gt;Между строк: Создание элементов интерфейса&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Значит, потом, ну наитие такое появилось, что нужно написать определенную статью, желательно про анимации.&lt;/p&gt;
+&lt;p&gt;Без лишних слов встречайте, анимации в &lt;strong&gt;Unity UI Toolkit&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;chapter-1-animation-concept&#34;&gt;Chapter 1: Animation concept&lt;/h2&gt;
+&lt;p&gt;Давайте начнем с объяснения того, как будет работать анимация для наших элементов интерфейса.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Between The Lines: Creating Interfaces Using Vectors</title>
       <link>http://localhost:1313/posts/btl-creating-interface-elements-using-vector-api/</link>
