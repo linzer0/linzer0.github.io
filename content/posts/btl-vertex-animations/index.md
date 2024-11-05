@@ -8,33 +8,27 @@ image = "0.png"
 alt = "The alt text"
 caption = ""
 relative = false
+tags = ['Unity', 'UI Toolkit', 'UI']
+categories = ["GameDev"]
 +++
-
-Здравствуйте, уважаемые господа. Меня зовут Линар Хилажев, я программирую логику, интерфейсы и игры.
-
-Хочу кое-что интересное рассказать... значит начались эти события после того как была написана статья [Между строк: Создание элементов интерфейса](https://habr.com/ru/articles/803651/).
-
-Значит, потом, ну наитие такое появилось, что нужно написать определенную статью, желательно про анимации.
-
-Без лишних слов встречайте, анимации в **Unity UI Toolkit**.
 
 ## Chapter 1: Animation concept
 
-Давайте начнем с объяснения того, как будет работать анимация для наших элементов интерфейса.
+Let's start by explaining how animation will work for our UI elements.
 
-Здесь речь не идет о переходах/задержках и других встроенных возможностях анимации в UI Toolkit.
+We are not talking here about transitions/delays and other built-in animation features in UI Toolkit.
 
-Из предыдущих статей мы уже научились создавать настраиваемые элементы пользовательского интерфейса. Теперь пришло время добавить немного динамичности.
+From previous articles, we have already learnt how to create customisable UI elements. Now it's time to add some dynamism.
 
-Стоит отметить, что генерация анимации является довольно ресурсоемким процессом по сравнению с другими операциями, так как она будет нагружать процессор практически на каждом кадре.
+It is worth noting that animation generation is quite resource-intensive compared to other operations, as it will load the CPU on almost every frame.
 
-Если разложить анимацию на базовые компоненты, то это будет изменение состояния объекта (размер, форма, цвет, положение и т.д.).
+If we decompose the animation into basic components, it would be the change of state of the object (size, shape, colour, position, etc.).
 
-Первая задача, перед которой мы стоим, - научиться вызывать внутренние методы класса **VisualElement** с определенным интервалом времени.
+The first task we face is to learn how to call the internal methods of the **VisualElement** class at a certain interval.
 
-Для этого мы будем использовать внутренюю реализацию интерфейса **IVisualElementScheduler**.
+For this purpose, we will use the internal implementation of the **IVisualElementScheduler** interface.
 
-Из названия можно догадаться, что оно занимается планированием и выполнением каких-то действий, давайте разбираться как с ним работать.
+From the name you can guess that it deals with planning and execution of some actions, let's understand how to work with it.
 ```csharp
 public RombElement()
 {
@@ -42,13 +36,13 @@ public RombElement()
 }
 ```
 
-В этом примере кода, при создание элемента мы обращаемся к методу **Execute** передавая в него **Action**.
+In this code sample, when creating an element, we call the **Execute** method by passing **Action** to it.
 
-Это значит, что этот метод будет вызван сразу после выполнения конструктора.
+This means that this method will be called immediately after the constructor is executed.
 
-Стоит понимать, что выполнен он будет только один раз, а как нам сделать многократные вызовы?
+It is worth understanding that it will be executed only once, but how do we make multiple calls?
 
-– Я рад, что вы спросили, отвечаю:
+-- I'm glad you asked, I'll answer
 
 ```csharp
 public RombElement()
@@ -57,17 +51,17 @@ public RombElement()
 }
 ```
 
-Мы добавляем к нашему вызову **.Every**, что означает, наш метод будет вызываться каждые X милисекунд.
+We add **.Every()** to our call, which means our method will be called every X milliseconds.
 
-С базой разобрались, давайте усложнять.
+The base is done, let's make it more complicated.
 
 ## Chapter 2: Color animation
 
-Под анимацией цвета мы будем обозначать изменение цвета/прозрачности и связанное с его составляющимим у **UI Element'a**
+By colour animation we will mean the change of colour/transparency and its related components in **UI Element**.
 
-Давайте сделаем так, чтобы наш элемент проявлялся из прозрачности.
+Let's make our element appear from transparency.
 
-Как и всегда, приведу весь код, а потом будет разбирать детально.
+As always, I'll give you all the code, and then I'll parse it in detail.
 
 ```csharp
 using UnityEngine;
@@ -139,17 +133,15 @@ namespace CustomElements
 }
 ```
 
-Обратим наше внимание на конструктор класса, мы там можем заметить вызов метода **scheduler'а**.
+Let's turn our attention to the class constructor, we can notice the **scheduler** method call there.
 
-Мы хотим вызывать метод **ChangeColorAnimation** каждые 16 ms.
+We want to call the **ChangeColorAnimation** method every 16 ms.
 
-Дальше идет само тело метода анимации, в нем мы можем заметить **_timeLeft**, это переменная для отслеживания времени анимации, которое изначально равно **AnimationTime**.
+Next comes the body of the animation method itself, in it we can notice **_timeLeft**, this is a variable to keep track of the animation time, which is initially equal to **AnimationTime**.
 
-Кстати, его можно настроить напрямую через **UI Builder**, благодаря новому аттрибуту **[UxmlAttribute]**.
+By the way, it can be configured directly through **UI Builder**, thanks to the new attribute **[UxmlAttribute]**.
 
-Он появился в новой версии пакета, подробнее о нововведениях можно прочитать в моей [статье](https://dtf.ru/gamedev/2540623-chto-neset-nam-den-gryadushii-ili-novye-vozmozhnosti-ui-toolkita-s-kodom-i-kartinkami).
-
-Мы немного отвлеклись, вернемся к нашим анимациям.
+We digress a little, let's back to our animations.
 
 ```csharp
 private void ChangeColorAnimation()
@@ -165,35 +157,36 @@ private void ChangeColorAnimation()
 }
 ```
 
-Дальше у нас идет четыре строки, где мы описываем, что оттенки наших вершин должны стремится от 0 к 255.
+Next, we have four lines where we describe that the shades of our vertices should tend from 0 to 255.
 
-После чего, мы вызываем метод **MarkDirtyRepaint()**, для того чтобы спровоцировать вызов метода **GenerateVisualContent(...)**
+After that, we call the **MarkDirtyRepaint()** method to trigger the **GenerateVisualContent(...)** method.
 
 {{< video src="firstColorAnimation.webm" type="video/webm" preload="auto" >}}
 
 ## Chapter 3: New Horizons
-Давайте признаемся, анимация цвета - это самое простое, что можно придумать.
+Let's face it, colour animation is the easiest thing to come up with.
 
-А что если у нас есть заявка на непосредственность? К примеру, мы хотим анимировать иконки/спрайты.
-Иногда в голову прилетают интересные вещи, такие как мысли или более тяжелые, как анимация иконок без кадровой анимации.
+But what if we have a request for immediacy? For example, we want to animate icons/sprites.
+Sometimes interesting things come to mind, like thoughts or heavier things like animating icons without frame animation.
 
-В таком случае рассмотрим следующий пример, предположим, мы хотим чтобы у нас была анимация для колокола.
+In that case consider the following example, let's say we want to have an animation for a bell.
+
 
 ![](https://habrastorage.org/r/w1560/webt/ll/6q/uh/ll6quhcji_lsuigdyl9oucpgnbm.png)
 
-Концептуально, мы не делаем ничего сложного, всего лишь меняем значение **rotate** у **VisualElement** и изменим центр масс.
+Conceptually, we don't do anything complicated, we just change the **rotate** value of **VisualElement** and change the centre of mass.
 
-Зачем менять центр у элемента? Чтобы логически было проще с этим работать и анимировать.
+Why change the centre of the element? To make it logically easier to work with and animate.
 
-Для этого нам нужно изменить свойство **transform-Origin**, которое принимает два значения (X, Y) , мы это сделаем прямо в конструкторе класса.
+To do this we need to change the **transform-Origin** property, which takes two values (X, Y), we will do it directly in the class constructor.
 
 ![](transform-custom-position.png)
 
-Обычно **transform-Origin** у элемента это **center-center**, то есть (X = 50%, Y = 50%), а мы хотим, чтобы он был **top-center** (X = 0, Y = 50%).
+Normally an element's **transform-Origin** is **center-center**, that is (X = 50%, Y = 50%), and we want it to be **top-center** (X = 0, Y = 50%).
 
-Более подробно можно посмотреть в [документации](https://docs.unity3d.com/Manual/UIE-Transform.html)
+You can see more details in [documentation](https://docs.unity3d.com/Manual/UIE-Transform.html)
 
-Теперь, приступаем к основной части нашего мероприятия, написание самой анимации.
+Let's code it!
 
 ```csharp
 using UnityEngine.UIElements;
@@ -252,24 +245,24 @@ namespace CustomElements
 }
 ```
 
-Так выглядит весь класс, наш взор падает на метод **RotateBell()**
+This is how the whole class looks like, our eye falls on the **RotateBell()** method
 
-Основной составляющей анимации в данном случае является изменение поворота изображения.
-Мы вращаем изображение влево и вправо до тех пор, пока не достигнем предела AngleLimit.
+The main component of the animation in this case is to change the rotation of the image.
+We rotate the image left and right until we reach the AngleLimit limit.
 
-Для этого мы изменяем значение свойства **style.rotate** и затем вызываем метод **MarkDirtyRepaint()**, чтобы нам перерисовали **VisualElement**.
+To do this, we change the value of the **style.rotate** property and then call the **MarkDirtyRepaint()** method to have the **VisualElement** redrawn.
 
-Получаем такой результат:
+We get this result:
 
 {{< video src="simple-rotate-animation.webm" type="video/webm" preload="auto" >}}
 
 
-## Chapter 4: Между линий
+## Chapter 4: Between The Lines
 
-На этой замечательной ноте, хочется завершить наши исследовательские работы по интерфейсам, это было хорошо пока продложалось.
-Также хочется дождаться релиза интересных фичей из [UI Roadmap'а](https://unity.com/roadmap/unity-platform/ui) , например Advanced UI Animation
-Думаю, в целом, было интересно позаниматься вопросами тулинга и автоматизации разного внутренних задач в Unity.
+Thank you for reading the article, I hope it was interesting and useful for you.
 
-Это то самое, знаменитое **Tool Programmer**, было было славно охватить сторону CI/CD.
+I will be back with more articles soon!
 
-Да-да, это анонс серии статей "Я не буду это делать руками: Создаем первые инструменты в разработке игр"
+See you soon, mate.
+
+
