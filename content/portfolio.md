@@ -21,19 +21,20 @@ About my results on this project:
 
 ### Game Logic
 
-*   Implemented 20+ daily and seasonal challenges
-*   Implemented 30+ character skills
-*   Implemented 3+ hero skills
+*   Implemented 20+ daily & seasonal quests/challenges;
+*   Developed 30+ unique character/hero abilities;
 
 ### UI Development
 
-*   Developed extensive logic for player profile customization (including avatar, titles, banners) and dynamic Addressables loading
-*   Assisted in organizing scalable interfaces for Figma and Unity canvas logic
+*   Developed extensive logic for player profile customization (avatar, titles, banners) and dynamic Addressable loading;
+*   Organized scalable UI process for Figma & Unity;
+*   Implemented plurals support for localization;
 
 ### Tooling
 
-*   Created a core scenario tester for QA departments (including creation, recording, running, and result output)
-*   Developed a tool for fast creation and integration of Battle Pass challenges
+*   Created a core scenario tester for QA departments (including creation, recording, running, and result output);
+*   Developed a tool for fast creation and integration of Battle Pass challenges;
+*   Created Code Templates for faster game logic writing;
 
 ### Technical Stacks
 
@@ -56,10 +57,9 @@ About my results on this project:
 
 ### Game Logic
 
-*   Developed game from scratch to MVP and work version
-*   Developed usable items and skills mechanics
-*   Implemented 15+ character skills
-*   Implemented 5+ hero skills
+*   Shipped game from scratch to Soft Launch;
+*   Developed usable items, skills mechanics;
+*   Implemented 25+ unique character & hero skills;
 *   Shop and Unity IAP integration
 
 ### UI Development
