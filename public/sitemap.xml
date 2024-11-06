@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/posts/btl-vertex-animations/</loc>
+    <lastmod>2024-11-03T15:09:15+07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-10-29T11:05:11+07:00</lastmod>
+    <lastmod>2024-11-03T15:09:15+07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-11-03T15:09:15+07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/btl-creating-interface-elements-using-vector-api/</loc>
     <lastmod>2024-10-29T11:05:11+07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/btl-create-interfaces-using-mesh/</loc>

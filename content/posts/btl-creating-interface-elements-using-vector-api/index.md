@@ -1,7 +1,7 @@
 +++
 date = '2024-10-29T11:05:11+07:00'
-draft = true
-title = 'Between The Lines: Creating Interface Elements Using Vector Api'
+draft = false
+title = 'Between The Lines: Creating Interfaces Using Vectors'
 hideSummary = true
 [cover]
     image = "0.png"
@@ -125,7 +125,7 @@ The four variables `top, left, right, bottom` are needed to simplify the handlin
 
 It is also important to note that these variable values will change depending on the size of the UI element (in UI Builder / build), and because of this our UI element will scale relative to the size of the screen and the element itself.
 
-![alt](https://habrastorage.org/getpro/habr/upload_files/f1c/1f7/d0a/f1c1f7d0a185fc888afbd63acdd9ac07.png "Именно на этом самом contentRect'e и будет происходить наша генерация.")
+![alt](https://habrastorage.org/getpro/habr/upload_files/f1c/1f7/d0a/f1c1f7d0a185fc888afbd63acdd9ac07.png)
 
 It is on this very contentRect that our generation will take place.
 
@@ -152,7 +152,7 @@ Also, it has various properties that affect the result of sketching:
 - lineCap - how the line ends will look like
 
 
-![alt](https://habrastorage.org/getpro/habr/upload_files/8d4/8a3/b35/8d48a3b35d97b1e76172bef6706b4ad1.png "Более наглядно как это выглядит")
+![alt](https://habrastorage.org/getpro/habr/upload_files/8d4/8a3/b35/8d48a3b35d97b1e76172bef6706b4ad1.png)
 
 More clearly how it looks like
 
@@ -160,22 +160,22 @@ We have decided how to prepare our **painter2D**, now let's see how paths are ha
 
 In the context of graphical programming, a “path” is a sequence of geometric shapes such as lines, curves, rectangles and circles that define the shape or contour of an object.
 
-Путь может быть открытым или закрытым.
+A path can be open or closed.
 
--   **Открытый путь:** Начинается и заканчивается без соединения конечных точек.
+- **Open path:** Starts and ends with no endpoints connected.
 
--   **Закрытый путь:** Конечные точки пути соединены, образуя замкнутую форму.
+- **Closed path:** The endpoints of a path are connected, forming a closed shape.
+
+1.  **Beginning of a new path**: This step defines the start of a new vector path. When `BeginPath()` is called, you begin writing drawing commands for the new path.
+
+2.  **Add Drawing Commands:** After starting a new path, you add drawing commands, such as `ArcTo()`, `LineTo()`, and others, to create shapes and geometric objects in your path.
+
+3.  **Path Completion**: After you have drawn all the necessary shapes and geometric objects for the current path, you call `ClosePath()` to end the path.  
+    This indicates to the graphics engine that you have finished drawing this path and that it should render it.
 
 
-1.  **Начало нового пути**: Этот шаг определяет начало нового векторного пути. При вызове `BeginPath()` вы начинаете записывать команды рисования для нового пути.
+Let's now go back to our example and break down what we are doing:
 
-2.  **Добавление команд рисования:** После начала нового пути вы добавляете команды рисования, такие как `ArcTo()`, `LineTo()`, и другие, для создания форм и геометрических объектов в вашем пути.
-
-3.  **Завершение пути**: После того как вы нарисовали все необходимые фигуры и геометрические объекты для текущего пути, вы вызываете `ClosePath()` для завершения этого пути.  
-    Это указывает графическому движку на то, что вы закончили рисование этого пути, и что он должен его отрисовать.
-
-
-Давайте теперь вернемся к нашему примеру и разберем, что мы делаем:
 
 ```csharp
 painter2D.BeginPath();
@@ -192,28 +192,28 @@ painter2D.LineTo(new Vector2((float)(right - (contentRect.width * 0.3)), (float)
 painter2D.Stroke();
 ```
 
-Мы начинаем с команды `BeginPath()` , после чего вызываем метод `MoveTo(Vector2 pos)` – который перемещает точку рисования на новую позицию, от которой будут выполняться следующие команды.
+We start with the `BeginPath()` command, after which we call the `MoveTo(Vector2 pos)` method - which moves the drawing point to a new position from which the following commands will be executed.
 
-Следом за ней идет метод `LineTo(Vector2 pos)` , как можно понять из названия, оно проводит прямую линию из текущей позицию `painter2D` до позиции заданный в аргументе метода.
+It is followed by the `LineTo(Vector2 pos)` method, which, as you can understand from the name, draws a straight line from the current `painter2D` position to the position specified in the method argument.
 
-Далее идет две пачки команды, которые перемещают курсор рисования и чертят линию.
+Next comes two command packs that move the drawing cursor and draw the line.
 
-В конце, мы можем заметить метод `Stroke()` – который непосредственно отрисовывает контур текущего пути, который мы определили ранее.
+At the end, we can notice the `Stroke()` method - which directly draws the outline of the current path we defined earlier.
 
-После вызова метода текущий контур будет отрисован на холсте с помощью текущего стиля обводки, такого как цвет и толщина линии.
+After calling the method, the current path will be drawn on the canvas using the current stroke style such as line color and thickness.
 
-Поздравляю, теперь у вас есть кастомный UI элемент!
+Congratulations, you now have a custom UI element!
 
-## Глава 2: Кривые!
+## Chapter 2: Curves!
 
-У нас есть два разных варианта возможности нарисовать кривые линии:
+We have two different options for being able to draw curved lines:
 
-1.  Метод `BezierCurveTo()` генерирует кубическую кривую Безье по двум контрольным точкам и конечному положению кубической кривой Безье.
+1.  The `BezierCurveTo()` method generates a cubic Bézier curve from two control points and the final position of the cubic Bézier curve.
 
-2.  Метод `QuadraticCurveTo()` генерирует квадратичную кривую Безье по контрольной точке и конечному положению квадратичной кривой Безье.
+2.  The `QuadraticCurveTo()` method generates a quadratic Bézier curve by a control point and the end position of a quadratic Bézier curve.
 
 
-Рассмотрим их использование:
+Let's consider their use:
 
 ```csharp
 painter2D.BeginPath();
@@ -222,11 +222,11 @@ painter2D.BezierCurveTo(new Vector2(150, 150), new Vector2(200, 50), new Vector2
 painter2D.Stroke();
 ```
 
-![Кривая Безье](https://habrastorage.org/getpro/habr/upload_files/e96/5dc/4a2/e965dc4a2213dba9f3d19973cc4a23cd.png "Кривая Безье")
+![alt](https://habrastorage.org/getpro/habr/upload_files/e96/5dc/4a2/e965dc4a2213dba9f3d19973cc4a23cd.png)
 
-Кривая Безье
+Bezier curve
 
-И также приведем код для второго примера:
+And we will also give the code for the second example:
 
 ```csharp
 painter2D.BeginPath();
@@ -235,26 +235,26 @@ painter2D.QuadraticCurveTo(new Vector2(150, 150), new Vector2(250, 100));
 painter2D.Stroke();
 ```
 
-![Квадратичная кривая Безье](https://habrastorage.org/getpro/habr/upload_files/058/b08/55a/058b0855a5dbdb1b7628dc1b816dd59a.png "Квадратичная кривая Безье")
+![alt](https://habrastorage.org/getpro/habr/upload_files/058/b08/55a/058b0855a5dbdb1b7628dc1b816dd59a.png)
 
-Квадратичная кривая Безье
+Quadratic Bézier curve
 
-Для более глубокого понимания кривых Безье, читаем [Wikipedia](https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%B2%D0%B0%D1%8F_%D0%91%D0%B5%D0%B7%D1%8C%D0%B5).
+For a deeper understanding of Bézier curves, we read [Wikipedia](https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%B2%D0%B0%D1%8F_%D0%91%D0%B5%D0%B7%D1%8C%D0%B5).
 
-## Глава 3: Дуги!
+## Chapter 3: Arcs!
 
-Для рисования дуг можно использовать следующие методы:
+You can use the following methods to draw arcs:
 
-1.  Метод `Arc()` создает дугу на основе предоставленного центра дуги, радиуса, а также начального и конечного углов.
+1.  The `Arc()` method creates an arc based on the arc center, radius, and start and end angles provided.
 
-2.  Метод `ArcTo()`создает дугу между двумя прямыми сегментами.
+2.  The `ArcTo()` method creates an arc between two straight segments.
 
 
-В рамках рисования дуг, так же стоит рассказать про заливку пути.
+As part of drawing arcs, it's also worth talking about filling the path.
 
-Когда в конце пути мы получаем [замкнутую фигуру](closedPath), тогда мы можем ее покрасить в какой-то цвет, вызвав метод `painter2D.Fill()`.
+When at the end of the path we get a [closedPath](closedPath), then we can paint it in some color by calling the `painter2D.Fill()` method.
 
-Рассмотрим пример построения дуги используя метод `Arc()` .
+Let's consider an example of building an arc using the `Arc()` method .
 
 ```csharp
 painter2D.lineWidth = 2.0f;
@@ -274,13 +274,13 @@ painter2D.Fill();
 painter2D.Stroke();
 ```
 
-И как раз, параметр `painter2D.FillColor` отвечает какой цвет будет у залитой области.
+And `painter2D.FillColor` will define fill color.
 
-![Красная обводка и синяя заливка](https://habrastorage.org/getpro/habr/upload_files/609/08c/193/60908c1935182d6b22f1d237fd11ffb4.png "Красная обводка и синяя заливка")
+![alt](https://habrastorage.org/getpro/habr/upload_files/609/08c/193/60908c1935182d6b22f1d237fd11ffb4.png)
 
-Красная обводка и синяя заливка
+Red outline and blue fill.
 
-А используя метод `painter2D.ArcTo()`, можно нарисовать кривую:
+Using `painter2D.ArcTo()`, we can draw a curve:
 
 ```csharp
 painter2D.BeginPath();
@@ -290,36 +290,35 @@ painter2D.LineTo(new Vector2(200, 100));
 painter2D.Stroke();
 ```
 
-![Кривая через дугу](https://habrastorage.org/getpro/habr/upload_files/07f/7b8/629/07f7b862986f28c95b92f16678f1cc67.png "Кривая через дугу")
+![alt](https://habrastorage.org/getpro/habr/upload_files/07f/7b8/629/07f7b862986f28c95b92f16678f1cc67.png)
 
-Кривая через дугу
+Curve through arc
 
-Вы наверное могли задуматься, а можно ли используя метод `Arc()` , построить окружность или круговую диаграмму.
+You may have wondered if you can use the `Arc()` method to draw a circle or a pie chart.
 
-_– Ну, конечно, можно._
+*– Well, of course you can*
 
-С ней вы можете ознакомиться из [официальной документации](https://docs.unity3d.com/2022.3/Documentation/Manual/UIE-pie-chart.html) от Unity.
+Just check [documentation](https://docs.unity3d.com/2022.3/Documentation/Manual/UIE-pie-chart.html) from Unity.
 
-## Глава 4: Остальное?
+## Chapter 4: The rest?
 
-Здесь хочу рассмотреть, что не вошло в другие главы, и другие комментарии по отрисовке.
+Here I want to cover some stuff that didn't make it into the other chapters, and some other comments on drawing.
 
-Первое, о чем хочется поговорить, это про дыры в заливке.
+The first thing I want to talk about is holes in fills.
 
-Когда вы вызываете `Fill()` для закраски области, содержащейся внутри пути, вы также можете создать "дыры" в этой закрашенной области, используя дополнительные подпути.
+When you call `Fill()` to fill an area contained within a path, you can also create "holes" in that filled area using additional subpaths.
 
-Чтобы создать дыру, вы должны создать дополнительный подпуть с помощью `MoveTo()`, а затем использовать правило заливки (fill rule), чтобы определить, какие области будут закрашены, а какие нет.
+To create a hole, you must create an additional subpath using `MoveTo()`, and then use a fill rule to determine which areas get filled and which don't.
 
-Вот два основных правила заливки:
+Here are the two basic fill rules:
 
-1.  **OddEven (Нечетное/Четное):** Отрисовывается луч из данной точки в бесконечность в любом направлении и подсчитываются количество пересечений сегментов пути. Если количество пересечений нечетное, то точка считается внутри пути, если четное - снаружи.
+1. **OddEven:** Draw a ray from the given point to infinity in any direction, and count the number of intersections with path segments. If the number of intersections is odd, the point is considered inside the path, if the number of intersections is even, the point is considered outside.
 
-2.  **NonZero (Не нуль):** Отрисовывается луч из данной точки в бесконечность в любом направлении, и подсчитываются пересечения сегментов пути. При этом, когда сегменты пересекают луч справа налево, счетчик уменьшается, а когда слева направо - увеличивается. Если счетчик равен нулю, то точка считается снаружи пути, иначе - внутри.
+2. **NonZero:** Draws a ray from the given point to infinity in any direction, and counts the intersections of the path segments. When segments intersect the ray from right to left, the counter is decremented, and when segments intersect the ray from left to right, the counter is incremented. If the counter is zero, the point is considered outside the path, otherwise, it is considered inside.
 
+So you can use these rules to create a hole in a filled area by defining a subpath that defines the outline of the hole, and using a fill rule to specify how the areas should be filled.
 
-Таким образом, вы можете использовать эти правила, чтобы создать дыру в заполненной области, описав подпуть, который определяет контур этой дыры, и используя правило заливки для указания, как области должны быть закрашены.
-
-В приведенном коде создается прямоугольник с дополнительным подпутем, который определяет форму ромба (бриллианта) внутри прямоугольника. Этот ромб будет являться "дырой" в заполненной области прямоугольника.
+The code above creates a rectangle with an additional subpath that defines a diamond shape inside the rectangle. This diamond will be the "hole" in the filled area of the rectangle.
 
 ```csharp
 painter2D.BeginPath();
@@ -338,13 +337,13 @@ painter2D.ClosePath();
 painter2D.Fill(FillRule.OddEven);
 ```
 
-![Прямоугольник с отверстием внутри](https://habrastorage.org/getpro/habr/upload_files/da7/a20/d44/da7a20d448dc1c34ff18dd5cc4ee6b0a.png "Прямоугольник с отверстием внутри")
+![alt](https://habrastorage.org/getpro/habr/upload_files/da7/a20/d44/da7a20d448dc1c34ff18dd5cc4ee6b0a.png)
 
-Прямоугольник с отверстием внутри
+Rectangle with a holes;
 
-Второе, это возможность настраивать стили в каждом подпути.
+Second, it is possible to customize styles in each subpath.
 
-Для этого нужно использовать методы `BeginPath()` и `ClosePath()` и между ними менять значения у `painter2D`.
+To do this, you need to use the `BeginPath()` and `ClosePath()` methods and change the values in `painter2D` between them.
 
 ```csharp
 private void GenerateVisualContent(MeshGenerationContext mgc)
@@ -352,7 +351,7 @@ private void GenerateVisualContent(MeshGenerationContext mgc)
     var painter2D = mgc.painter2D;
     painter2D.lineWidth = 10.0f;
 
-    // Начало первого подпути
+    // First subpath starts
     painter2D.BeginPath();
     painter2D.strokeColor = Color.red;
   
@@ -361,9 +360,9 @@ private void GenerateVisualContent(MeshGenerationContext mgc)
   
     painter2D.Stroke();
     painter2D.ClosePath();
-    // Конец первого подпутя
+    // End of first subpath
 
-    // Начало второго подпути
+    // Second subpath starts
     painter2D.BeginPath();
     painter2D.strokeColor = Color.blue;
   
@@ -372,9 +371,9 @@ private void GenerateVisualContent(MeshGenerationContext mgc)
     
     painter2D.Stroke();
     painter2D.ClosePath();
-    // Конец второго подпутя
+    // End of second subpath
 
-    // Начало третьего подпути
+    // Third subpath starts
     painter2D.BeginPath();
     painter2D.strokeGradient = new Gradient()
     {
@@ -394,15 +393,15 @@ private void GenerateVisualContent(MeshGenerationContext mgc)
     painter2D.Stroke();
             
     painter2D.ClosePath();
-    // Конец третьего подпутя
+    // End of subpaths 
 }
 ```
 
-![Три разных стиля](https://habrastorage.org/getpro/habr/upload_files/378/bf4/404/378bf4404732002951c86d2ad1e39220.png "Три разных стиля")
+![alt](https://habrastorage.org/getpro/habr/upload_files/378/bf4/404/378bf4404732002951c86d2ad1e39220.png)
 
-Три разных стиля
+Three different styles.
 
-Внимательный зритель уже заметил следующую фишку – поддержка градиента для обводки.
+An attentive viewer has already noticed the next feature – support for gradients for strokes.
 
 ```csharp
 painter2D.strokeGradient = new Gradient()
@@ -415,16 +414,16 @@ painter2D.strokeGradient = new Gradient()
 };
 ```
 
-Используя свойство `strokeGradient` можно рисовать обводку через градиент.
+Using the `strokeGradient` property you can draw a stroke through a gradient.
 
-## Глава 5: Финал!
+## Chapter 5: Conclusion
 
-Поздравляю с тем, что вы дочитали эту статья до конца.
+Congratulations on reading this article to the end.
 
-Сегодня мы разобрались как можно рисовать кастомные элементы в интерфейсах, какой инструментарий для этого имеется в движке Unity.
+Today we figured out how to draw custom elements in interfaces, what tools are available for this in the Unity engine.
 
-Для более глубокого погружения и изучения создания элементов интерфейса, рекомендую официальную [документацию](https://docs.unity3d.com/2022.3/Documentation/Manual/UIE-ui-renderer.html).
+For a deeper dive and study of creating interface elements, I recommend the official [documentation](https://docs.unity3d.com/2022.3/Documentation/Manual/UIE-ui-renderer.html).
 
-Если у вас остались вопросы или не поняли какую-то часть, напишите в комментариях, постараюсь объяснить, что да как :)
+If you have any questions or did not understand some part, write in the comments, I will try to explain what and how :)
 
-Спасибо за внимание и до скорых встреч
+Thank you for your attention and see you soon
