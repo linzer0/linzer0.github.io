@@ -6,46 +6,34 @@
     .gallery-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 10px; 
         justify-content: space-around;
-        width: 100%;
-        margin: 0 auto;
+        width: 100%; 
+        margin: 0 auto; 
     }
     .gallery-container a {
-        flex: 1 1 calc(25% - 10px);
+        flex: 1 1 calc(25% - 10px); 
         max-width: calc(25% - 10px);
-        border-radius: 5px;
-        overflow: hidden;
     }
-    /* Стиль для горизонтальных изображений */
-    .gallery-container a.horizontal img {
+    .gallery-container img {
         width: 100%;
         height: auto;
+        border-radius: 5px;
         object-fit: cover;
-    }
-    /* Стиль для вертикальных изображений */
-    .gallery-container a.vertical img {
-        width: auto;
-        height: 100%;
-        object-fit: contain;
     }
 </style>
 
 {{ $folder := .Get "folder" }}
-<p>Ищем изображения в папке: {{ $folder }}</p>
 <div class="gallery-container">
     {{ with (.Page.Resources.Match (printf "%s/*" $folder)) }}
     {{ if . }}
     {{ range . }}
-    {{ $resized := .Resize "600x800 q90" }}
-    <a href="{{ .Permalink }}" data-lightbox="gallery" class="{{ if gt .Height .Width }}vertical{{ else }}horizontal{{ end }}">
+    {{ $resized := .Resize "600x400 q90" }}
+    <a href="{{ .Permalink }}" data-lightbox="gallery">
         <img src="{{ $resized.Permalink }}" alt="{{ .Name }}" />
     </a>
     {{ end }}
     {{ else }}
-    <p>Изображения не найдены в папке: {{ $folder }}</p>
     {{ end }}
     {{ end }}
 </div>
-
-
