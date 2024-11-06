@@ -11,7 +11,10 @@ buildExpired: false
 minify:
   disableXML: true
   minifyOutput: true
-
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 languages:
   en:
     languageName: "English"
