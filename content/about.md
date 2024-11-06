@@ -12,3 +12,5 @@ summary: about
 - 💬 Ask me about **Unity, Optimization, C#**
 - 📫 Reach me out by email **zzlinarzz@gmail.com** my inbox is always open
 - ⚡ Fun fact **Vim & Factorio enjoyer.**
+
+![Science in Action!](/science-in-action.gif)
