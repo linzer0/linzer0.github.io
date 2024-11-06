@@ -6,20 +6,28 @@
     .gallery-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px; /* Отступы между изображениями */
-        justify-content: center;
-        max-width: 100%;
+        gap: 10px;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0 auto;
     }
-    .gallery-container img {
+    .gallery-container a {
+        flex: 1 1 calc(25% - 10px);
+        max-width: calc(25% - 10px);
         border-radius: 5px;
-        transition: transform 0.2s;
-        width: 100%; /* По умолчанию ширина 100% от контейнера */
-        max-width: 250px; /* Ограничение для компактности */
-        height: auto; /* Адаптивная высота */
-        object-fit: cover; /* Подгоняет изображение по контейнеру */
+        overflow: hidden;
     }
-    .gallery-container img:hover {
-        transform: scale(1.05);
+    /* Стиль для горизонтальных изображений */
+    .gallery-container a.horizontal img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    /* Стиль для вертикальных изображений */
+    .gallery-container a.vertical img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
     }
 </style>
 
@@ -29,8 +37,8 @@
     {{ with (.Page.Resources.Match (printf "%s/*" $folder)) }}
     {{ if . }}
     {{ range . }}
-    {{ $resized := .Resize "600x400 q90" }}
-    <a href="{{ .Permalink }}" data-lightbox="gallery">
+    {{ $resized := .Resize "600x800 q90" }}
+    <a href="{{ .Permalink }}" data-lightbox="gallery" class="{{ if gt .Height .Width }}vertical{{ else }}horizontal{{ end }}">
         <img src="{{ $resized.Permalink }}" alt="{{ .Name }}" />
     </a>
     {{ end }}
@@ -39,3 +47,5 @@
     {{ end }}
     {{ end }}
 </div>
+
+

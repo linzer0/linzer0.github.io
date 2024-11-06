@@ -86,9 +86,7 @@ About my results on this project:
 
 *   Unity Engine, C#, URP, uGUI
 
-![](MergePunk_1.webp) 
-![](MergePunk_2.webp) 
-![](MergePunk_3.webp)
+{{< gallery folder="/mergepunk-gallery" >}}
 
 ----
 
@@ -102,7 +100,7 @@ My indie staff
 
 AveL simple puzzle platform game about two brothers boxes!.
 
-![](Avel_3.png) ![](Avel_1.png)
+{{< gallery folder="/avel-gallery" >}}
 
 
 ----
@@ -112,7 +110,7 @@ AveL simple puzzle platform game about two brothers boxes!.
 
 "Thief Cracker" is a bold platformer where you solve math puzzles to outsmart traps and claim the ultimate prize!
 
-![](TC_2.png) ![](TC_3.png)
+{{< gallery folder="/tc-gallery" >}}
 
 
 ----
