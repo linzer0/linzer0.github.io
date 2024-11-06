@@ -37,10 +37,7 @@ About my results on this project:
 
 *   Unity Engine, C#, CRP, DOTS, UI Toolkit
 
-![](HOA_1.webp) 
-![](HOA_2.webp) 
-![](HOA_3.webp) 
-![](HOA_4.webp)
+{{< gallery folder="/hoa-gallery" >}}
 
 ----
 

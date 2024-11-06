@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+
+<style>
+    .gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Отступы между изображениями */
+        justify-content: center;
+        max-width: 100%;
+    }
+    .gallery-container img {
+        border-radius: 5px;
+        transition: transform 0.2s;
+        width: 100%; /* По умолчанию ширина 100% от контейнера */
+        max-width: 250px; /* Ограничение для компактности */
+        height: auto; /* Адаптивная высота */
+        object-fit: cover; /* Подгоняет изображение по контейнеру */
+    }
+    .gallery-container img:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+{{ $folder := .Get "folder" }}
+<p>Ищем изображения в папке: {{ $folder }}</p>
+<div class="gallery-container">
+    {{ with (.Page.Resources.Match (printf "%s/*" $folder)) }}
+    {{ if . }}
+    {{ range . }}
+    {{ $resized := .Resize "600x400 q90" }}
+    <a href="{{ .Permalink }}" data-lightbox="gallery">
+        <img src="{{ $resized.Permalink }}" alt="{{ .Name }}" />
+    </a>
+    {{ end }}
+    {{ else }}
+    <p>Изображения не найдены в папке: {{ $folder }}</p>
+    {{ end }}
+    {{ end }}
+</div>
