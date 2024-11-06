@@ -6,9 +6,6 @@ summary: portfolio
 
 ---
 
-Linar Khilazhev Portfolio
-=========================
-
 Commercial projects
 -------------------
 
