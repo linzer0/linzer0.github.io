@@ -30,7 +30,9 @@
     {{ range . }}
     {{ $resized := .Resize "600x400 q90" }}
     <a href="{{ .Permalink }}" data-lightbox="gallery">
-        <img src="{{ $resized.Permalink }}" alt="{{ .Name }}" />
+        <div class="image">
+            <img src="{{ $resized.Permalink }}" alt="{{ .Name }}" />
+        </div>
     </a>
     {{ end }}
     {{ else }}
