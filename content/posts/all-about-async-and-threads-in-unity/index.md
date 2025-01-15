@@ -129,3 +129,12 @@ public class WantToKnowAsync : MonoBehaviour
 
     https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Awaitable.html
 
+
+
+## Нюансы
+
+1. void. async void methods are generally discouraged for code other than event handlers because callers cannot await those methods and must implement a different mechanism to report successful completion or error conditions. Никто его не заметит
+2. You use the void return type primarily to define event handlers, which require that return type. The caller of a void-returning async method can't await it and can't catch exceptions that the method throws.
+3. SetResult
+4. Task.WaitAny and All
+5. The async method can't declare any in, ref or out parameters, nor can it have a reference return value, but it can call methods that have such parameters.
