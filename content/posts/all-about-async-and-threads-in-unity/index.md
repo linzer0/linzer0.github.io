@@ -14,6 +14,8 @@ title = 'All About Async and Threads in Unity'
 
 Представляю вашему вниманию Хочу Знать: Async, Coroutine, Threads, Nuances.
 
+_Хочу подсветить, что тут акцент я сделаю больше на нюансы и подводные камни, а на базовые моменты оставлю ссылки на хорошие ресурсы._
+
 ## Выдача базы
 
 
@@ -42,22 +44,31 @@ title = 'All About Async and Threads in Unity'
 
 Давайте рассмотрим какой-то кодовый пример, мы же все таки программисты, ек-макарек:
 
-/// Можно привести в пример что-то более осозннаное например вызов UnityWebRequest 
+Например, мы можем использовать async для работы с интернетом и запросами к нему, вот пример обращения к Google. 
+(очень бессмысленный, но рабочий)
 
 ```csharp
 
-public class WaiterClass : MonoBehaviour
+public class WantToKnowAsync : MonoBehaviour
 {
     void Start()
     {
-        await WaitSomeTimeAsync(10);
+        GetLength();
     }
 
-    public async Task WaitSomeTimeAsync(float time)
+    async void GetLength()
     {
-        Debug.Log("Wait starts now");
-        await Task.Delay(time);
-        Debug.Log("Wait ends now");
+        Debug.Log("Start Time " + DateTime.Now);
+        var result = await GetSiteLengthAsync();
+        Debug.Log(result);
+        Debug.Log("End Time " + DateTime.Now);
+    }
+
+    async Task<int> GetSiteLengthAsync()
+    {
+        HttpClient client = new HttpClient();
+        var answer = await client.GetStringAsync("https://google.com");
+        return answer.Length;
     }
 }
 
@@ -72,6 +83,9 @@ public class WaiterClass : MonoBehaviour
     https://support.unity.com/hc/en-us/articles/208707516-Why-should-I-use-Threads-instead-of-Coroutines
 
     Я не буду сильно углубляться в то как это все работает, оставлю ссылку на хорошую статью про [habr](https://habr.com/ru/articles/470830/).
+
+
+Если у вас остались вопросы по использованию await/async тогда вам [сюда](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/)
 
 ## Coroutine
 
