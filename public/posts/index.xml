@@ -6,8 +6,21 @@
     <description>Recent content in Posts on linar.dev</description>
     <generator>Hugo -- 0.136.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Nov 2024 15:09:15 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jan 2025 12:46:38 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>All About Async and Threads in Unity (Draft variant)</title>
+      <link>http://localhost:1313/posts/all-about-async-and-threads-in-unity/</link>
+      <pubDate>Thu, 09 Jan 2025 12:46:38 +0700</pubDate>
+      <guid>http://localhost:1313/posts/all-about-async-and-threads-in-unity/</guid>
+      <description>&lt;h1 id=&#34;want-to-know--async-coroutine-nuances&#34;&gt;Want to Know : Async, Coroutine, Nuances&lt;/h1&gt;
+&lt;p&gt;Работа над данной статьей приостановлена, наработки хотел опубликовать.&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Всем привет! Хочу поздравить вас с началом нового цикла статей Хочу Знать;&lt;/p&gt;
+&lt;p&gt;Начнем мы с темы которая набила оскомину во многих местах, часто применяется и вообще, черт бы ногу сломал (кто-то начинает тащить еще и UniRX или другую хуйню),&lt;/p&gt;
+&lt;p&gt;Представляю вашему вниманию Хочу Знать: Async, Coroutine, Threads, Nuances.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Хочу подсветить, что тут акцент я сделаю больше на нюансы и подводные камни, а на базовые моменты оставлю ссылки на хорошие ресурсы.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Between The Lines: Vertex Animations</title>
       <link>http://localhost:1313/posts/btl-vertex-animations/</link>
