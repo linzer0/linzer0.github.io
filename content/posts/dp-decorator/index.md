@@ -124,12 +124,15 @@ class Program
 ### Pros:
 
 ✅ More flexible than subclassing. 
+
 ✅ Supports the **Single Responsibility Principle** by separating concerns. 
+
 ✅ Can be combined to create complex behaviors.
 
 ### Cons:
 
-❌ Can make debugging harder due to multiple layers of wrappers. i
+❌ Can make debugging harder due to multiple layers of wrappers. 
+
 ❌ Increased complexity compared to direct inheritance.
 
 ## Conclusion
