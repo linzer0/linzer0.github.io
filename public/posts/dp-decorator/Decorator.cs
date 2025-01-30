@@ -1,67 +1,79 @@
-namespace DefaultNamespace;
-
-public class Main
-{
-    public void Start()
-    {
-        var webPage = new WebPage();
-        
-        //base logic
-        var baseWebPageDecorator = new BaseWebPageDecorator(webPage);
-        
-        // base logic + play audio
-        var soundWebPage = new SoundWebPageDecorator(webPage);
-    }
-}
+namespace DecoratorExample;
 
 public abstract class WebPage
 {
-    public virtual void Open();
-    public virtual void Hide();
+    public abstract void Open();
+    public abstract void Hide();
 }
 
-public class BaseWebPageDecorator : WebPage
+public class BasicWebPage : WebPage
 {
-    private WebPage _currentPage;
-
     public override void Open()
     {
-        _currentPage.Open();
-    };
-
+        Console.WriteLine("Opening basic web page");
+    }
+    
     public override void Hide()
     {
-        _currentPage.Hide();
-    };
-
-    public BaseWebPageDecorator(WebPage page)
-    {
-        _currentPage = page;
+        Console.WriteLine("Hiding basic web page");
     }
 }
 
-public class SoundWebPageDecorator : BaseWebPageDecorator
+public abstract class WebPageDecorator : WebPage
 {
-    private WebPage _currentWebPage;
+    protected WebPage _webPage;
+    
+    protected WebPageDecorator(WebPage webPage)
+    {
+        _webPage = webPage;
+    }
+    
+    public override void Open()
+    {
+        _webPage.Open();
+    }
+    
+    public override void Hide()
+    {
+        _webPage.Hide();
+    }
+}
 
-    public void Open()
+public class SoundWebPageDecorator : WebPageDecorator
+{
+    public SoundWebPageDecorator(WebPage webPage) : base(webPage) { }
+    
+    public override void Open()
     {
         base.Open();
         PlayOpenSound();
-    };
-
-    public void Hide()
+    }
+    
+    public override void Hide()
     {
         base.Hide();
         PlayHideSound();
-    };
+    }
     
-    public void PlayOpenSound() {};
-
-    public void PlayHideSound() {};
-
-    public SoundWebPageDecorator(IWebPage webPage)
+    private void PlayOpenSound()
     {
-        _currentWebPage = webPage;
+        Console.WriteLine("Playing open sound");
+    }
+    
+    private void PlayHideSound()
+    {
+        Console.WriteLine("Playing hide sound");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        WebPage basicPage = new BasicWebPage();
+        WebPage soundPage = new SoundWebPageDecorator(basicPage);
+        
+        soundPage.Open();  // Opening basic web page + Playing open sound
+        soundPage.Hide();  // Hiding basic web page + Playing hide sound
     }
 }

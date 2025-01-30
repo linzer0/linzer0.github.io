@@ -11,89 +11,132 @@ Decorator. Hoorrayyy, it's first article in Design Patterns.
 
 I want to describe patterns, use cases, and examples, and nuances.
 
-# Decorator
+# Decorator Pattern
 
-It's structural patterns, it's mean, xdd.
+## Introduction
 
-## Shortly:
-1. Abstract class / Wrapper for logic
-2. Adding behaviour for base component.
+The **Decorator** pattern is one of the structural design patterns. It allows us to dynamically extend the behavior of objects without modifying their structure. This pattern is widely used when we need to add responsibilities to objects in a flexible and reusable way.
 
+## Key Concepts
 
-So, that how it looks it UML:
+1. **Abstract component** – Defines the base interface.
+2. **Concrete component** – A basic implementation of the component.
+3. **Decorator (Wrapper)** – Inherits from the base component and adds new behavior.
 
-![](decorator.drawio.svg)
+## UML Diagram
+
+![](decorator.drawio2.svg)
+
+## Code Example
+
+Let's implement a simple **WebPage** system where different decorators extend functionality, such as playing sounds when opening and closing a page.
 
 ```csharp
-
-namespace DefaultNamespace;
-
-public class Main
-{
-    public void Start()
-    {
-        var webPage = new WebPage();
-        
-        //base logic
-        var baseWebPageDecorator = new BaseWebPageDecorator(webPage);
-        
-        // base logic + play audio
-        var soundWebPage = new SoundWebPageDecorator(webPage);
-    }
-}
+namespace DecoratorExample;
 
 public abstract class WebPage
 {
-    public virtual void Open();
-    public virtual void Hide();
+    public abstract void Open();
+    public abstract void Hide();
 }
 
-public class BaseWebPageDecorator : WebPage
+public class BasicWebPage : WebPage
 {
-    private WebPage _currentPage;
-
     public override void Open()
     {
-        _currentPage.Open();
-    };
-
+        Console.WriteLine("Opening basic web page");
+    }
+    
     public override void Hide()
     {
-        _currentPage.Hide();
-    };
-
-    public BaseWebPageDecorator(WebPage page)
-    {
-        _currentPage = page;
+        Console.WriteLine("Hiding basic web page");
     }
 }
 
-public class SoundWebPageDecorator : BaseWebPageDecorator
+public abstract class WebPageDecorator : WebPage
 {
-    private WebPage _currentWebPage;
+    protected WebPage _webPage;
+    
+    protected WebPageDecorator(WebPage webPage)
+    {
+        _webPage = webPage;
+    }
+    
+    public override void Open()
+    {
+        _webPage.Open();
+    }
+    
+    public override void Hide()
+    {
+        _webPage.Hide();
+    }
+}
 
-    public void Open()
+public class SoundWebPageDecorator : WebPageDecorator
+{
+    public SoundWebPageDecorator(WebPage webPage) : base(webPage) { }
+    
+    public override void Open()
     {
         base.Open();
         PlayOpenSound();
-    };
-
-    public void Hide()
+    }
+    
+    public override void Hide()
     {
         base.Hide();
         PlayHideSound();
-    };
+    }
     
-    public void PlayOpenSound() {};
-
-    public void PlayHideSound() {};
-
-    public SoundWebPageDecorator(IWebPage webPage)
+    private void PlayOpenSound()
     {
-        _currentWebPage = webPage;
+        Console.WriteLine("Playing open sound");
+    }
+    
+    private void PlayHideSound()
+    {
+        Console.WriteLine("Playing hide sound");
     }
 }
 
+class Program
+{
+    static void Main()
+    {
+        WebPage basicPage = new BasicWebPage();
+        WebPage soundPage = new SoundWebPageDecorator(basicPage);
+        
+        soundPage.Open();  // Opening basic web page + Playing open sound
+        soundPage.Hide();  // Hiding basic web page + Playing hide sound
+    }
+}
 ```
 
-Sounds, that how it looks!
+## When to Use
+
+- When you need to **extend an object’s behavior dynamically** without modifying its code.
+- When subclassing leads to **class explosion** due to multiple feature combinations.
+- When you want to follow the **Open/Closed Principle** (open for extension, closed for modification).
+
+## Pros & Cons
+
+### Pros:
+
+✅ More flexible than subclassing. 
+✅ Supports the **Single Responsibility Principle** by separating concerns. 
+✅ Can be combined to create complex behaviors.
+
+### Cons:
+
+❌ Can make debugging harder due to multiple layers of wrappers. i
+❌ Increased complexity compared to direct inheritance.
+
+## Conclusion
+
+The **Decorator** pattern is a powerful tool for extending functionality without modifying existing code. 
+
+It is widely used in GUI systems, logging, security layers, and even Unity components. 
+
+Understanding this pattern helps create scalable and maintainable software.
+
