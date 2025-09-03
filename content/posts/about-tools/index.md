@@ -35,14 +35,22 @@ hideSummary = true
 
 Самое первое с чем вы сталкнетесь, это дополнительные элементы Меню.
 
+## Сегодня в Меню - MenuItem
+
 ```csharp
-public class MenuHelper
+using UnityEditor;
+using UnityEngine;
+
+namespace MenuItems
 {
-    [MenuItem("Custom/WriteLog")]
-    public static void WriteLog()
+    public static class MenuHelper
     {
-        Debug.Log("Hello, Habr.")
-        Debug.Log("Look, who's back")
+        [MenuItem("Custom/WriteLog")]
+        public static void WriteLog()
+        {
+            Debug.Log("Hello, Habr.");
+            Debug.Log("Look, who's back");
+        }
     }
 }
 ```
@@ -61,12 +69,15 @@ public class MenuHelper
 using UnityEditor;
 using UnityEditor.SceneManagement;
 
-public class SceneHelper
+namespace MenuItems
 {
-    [MenuItem("Custom/Open Test Scene")]
-    public static void OpenTestScene()
+    public static class SceneHelper
     {
-        EditorSceneManager.OpenScene("Assets/Scenes/TestScene.unity");
+        [MenuItem("Custom/Open Test Scene")]
+        public static void OpenTestScene()
+        {
+            EditorSceneManager.OpenScene("Assets/Scenes/TestScene.unity");
+        }
     }
 }
 ```
@@ -76,18 +87,22 @@ public class SceneHelper
 
 Данный вариант не самый удобный для навигации между сценами, чуть позже мы рассмотрим продвинутый способ.
 
-Также, вы можете вызывать системные утилиты, например, чтобы открыть Проводник в рутовой папке проекта (очень полезно когда надо импортнуть текстурки, модели или что-то еще);
+Также, вы можете вызывать системные утилиты, например, чтобы открыть Проводник в рутовой папке проекта (очень полезно
+когда надо импортнуть текстурки, модели или что-то еще);
 
 ```csharp
-using UnityEngine;
-using UnityEditor;
 using System.Diagnostics;
+using UnityEditor;
+using UnityEngine;
+using Debug = UnityEngine.Debug;
 
-public class ProjectHelper
+namespace MenuItems
 {
-    [MenuItem("Custom/Open Project Folder")]
-    public static void OpenProjectFolder()
+    public static class ProjectHelper
     {
+        [MenuItem("Custom/Open Project Folder")]
+        public static void OpenProjectFolder()
+        {
             string projectPath = Application.dataPath.Replace("/Assets", "");
 
             Process.Start(projectPath);
@@ -95,9 +110,154 @@ public class ProjectHelper
             Debug.Log($"Открыта директория проекта: {projectPath}");
         }
     }
+}
+
 ```
 
+С примерами по MenuItem мы пока закончим, по-сути, мы выполняем какой-то код, который заранее написали. Просто и
+гениально.
 
+## Конфиги
+
+Дальше о чем хочется рассказать про валидацию конфигов. Часто бывает, что программисты создают конфигурации, например с ссылками на Sprite, или List
+И с точки зрения кода, ожидают, что там что-то обязательно придет и желательно не null, но люди не технические, например геймдизайнеры, могут не знать о различных нюансах конфигов.
+
+В этом случае, нам помогает валидация. Приведем пример конфига и его валидации.
+
+```csharp
+using System.Collections.Generic;
+using UnityEngine;
+
+    [CreateAssetMenu(fileName = "PrefabConfig", menuName = "Configs/Prefab Config")]
+    public class PrefabConfig : ScriptableObject
+    {
+        [SerializeField] private List<GameObject> prefabs = new List<GameObject>();
+
+        public IReadOnlyList<GameObject> Prefabs => prefabs;
+
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        if (prefabs == null || prefabs.Count == 0)
+        {
+            Debug.LogWarning($"[{name}] Prefab list is empty!");
+            return;
+        }
+
+        for (int i = 0; i < prefabs.Count; i++)
+        {
+            if (prefabs[i] == null)
+            {
+                Debug.LogError($"[{name}] Prefab at index {i} is NULL!");
+            }
+        }
+    }
+#endif
+}
+```
+
+Мы написали метод реализацию OnValidate - это метод от Unity, и будет вызываться при изменение значения полей, при импорте ассета, итд.
+https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnValidate.html
+
+Самое вадное, что нам нужно об этом знать, что этот метод Editor'овский и в билд не попадает.
+
+Используя метод OnValidate, можно обезопасить себя от различных проблем с конфигурациями.
+Я сперва пишу поля конфига, а потом отдаю AI, чтобы они написали метод OnValidate и добавили проверки. 
+Занимает небольшое количество времени, а жить становиться гораздо приятнее)/
+
+У внимательного читателя мог возникнуть вопрос, "Здорово, что оно само вызывается, а я могу ее руками как-то вызввать?".
+
+Отличный вопрос! В идеальном Unity-мире, у нас был бы аттрибут [Button], который бы добавили к методу и выглядело бы оно так:
+```csharp
+[Button("Validate Assets)]
+private void OnValidate()
+{
+    ...
+}
+```
+К сожалению придется вас огорчить, из коробки такого аттрибута нет, придется что-то придумывать...
+
+У нас есть две возможности:
+1. Легкий (не наш путь) - взять OdinInspector (https://odininspector.com/attributes/button-attribute) и просто добавить его к методу 
+2. Инженерный - сделать это самостоятельно.
+
+
+
+```csharp
+## Asset PreProcessor
+
+using UnityEditor;
+using UnityEditor.Build;
+using UnityEditor.Build.Reporting;
+using UnityEngine;
+
+public class ConfigValidatorPreprocessor : IPreprocessBuildWithReport
+{
+    public int callbackOrder => 0;
+
+    public void OnPreprocessBuild(BuildReport report)
+    {
+        // Находим все ScriptableObject типа PrefabConfig в проекте
+        string[] guids = AssetDatabase.FindAssets("t:PrefabConfig");
+
+        foreach (string guid in guids)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(guid);
+            var config = AssetDatabase.LoadAssetAtPath<PrefabConfig>(path);
+
+            if (config == null) continue;
+
+            // вручную вызываем OnValidate
+            config.ForceValidate();
+
+            Debug.Log($"[Build Validation] Checked config: {path}");
+        }
+    }
+}
+
+
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "PrefabConfig", menuName = "Configs/Prefab Config")]
+public class PrefabConfig : ScriptableObject
+{
+    [SerializeField] private List<GameObject> prefabs = new List<GameObject>();
+
+    public IReadOnlyList<GameObject> Prefabs => prefabs;
+
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+    ValidateInternal();
+    }
+
+    public void ForceValidate()
+    {
+        ValidateInternal();
+    }
+
+    private void ValidateInternal()
+    {
+        if (prefabs == null || prefabs.Count == 0)
+        {
+            Debug.LogError($"[{name}] Prefab list is empty! Build will fail.");
+            throw new System.Exception($"Invalid config: {name} is empty.");
+        }
+
+        for (int i = 0; i < prefabs.Count; i++)
+        {
+            if (prefabs[i] == null)
+            {
+                Debug.LogError($"[{name}] Prefab at index {i} is NULL! Build will fail.");
+                throw new System.Exception($"Invalid config: {name} contains null prefab.");
+            }
+        }
+    }
+#endif
+}
+
+```
 
 # 2. Базовые инструменты Unity Editor
 
