@@ -182,11 +182,3 @@ Tests, R&D and other kind of projects
 ---------------------------------------------------------------------------
 ### Karel in Python teaches programming basics through fun and interactive coding challenges.
 ---
-
-{{< unity-webgl-player
-gameTitle="UnRailed"
-width="700"
-height="500"
-buildURL="UnrailedLike/Build"
-buildFileName="UnrailedLike"
-playerID="">}}
