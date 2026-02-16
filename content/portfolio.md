@@ -12,6 +12,8 @@ Commercial projects
 
 [Berserk Heroes Online](https://ru.4game.ru/berserk/)
 
+{{< gallery folder="/bho-gallery" >}}
+
 Berserk Heroes Online is a dynamic card duel that has gained a new dimension. 
 Recruit creatures, use spells, and equip equipment to ensure your dominance in battle. 
 
@@ -24,17 +26,19 @@ Recruit creatures, use spells, and equip equipment to ensure your dominance in b
 
 * Unity Engine, C#, Shared Client-Server, ECS.
 
-{{< gallery folder="/bho-gallery" >}}
 
--------------------
 
 -------------------
 
 [Thesia: Isekai World RPG](https://play.google.com/store/apps/details?id=com.lategame.thesia)
 
+{{< gallery folder="/tiw-gallery" >}}
+
 Thesia: Isekai World RPG
 Step into the enchanting world of Thesia: Isekai World, a captivating anime RPG that blends strategic battles, hero collecting, and breathtaking storytelling. 
+
 Explore a crumbling isekai world filled with danger, beauty, and mystery. 
+
 Unite Thesia's diverse anime heroes from different dimensions and lead them to victory in this epic role-playing game.
 
 -------------------
@@ -44,7 +48,6 @@ Unite Thesia's diverse anime heroes from different dimensions and lead them to v
 
 * Unity Engine, C#, Shared Client-Server, ECS.
 
-{{< gallery folder="/tiw-gallery" >}}
 
 -------------------
 
