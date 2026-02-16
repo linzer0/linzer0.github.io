@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Portfolios on linar.dev</title>
-    <link>https://linzer0.github.io/portfolio/</link>
-    <description>Recent content in Portfolios on linar.dev</description>
+    <title>Nulls on linar.dev</title>
+    <link>http://localhost:1313/null/</link>
+    <description>Recent content in Nulls on linar.dev</description>
     <generator>Hugo -- 0.155.3</generator>
     <language>en</language>
-    <atom:link href="https://linzer0.github.io/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/null/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://linzer0.github.io/portfolio/unrailedlike/</link>
+      <link>http://localhost:1313/null/unrailedlike/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://linzer0.github.io/portfolio/unrailedlike/</guid>
+      <guid>http://localhost:1313/null/unrailedlike/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html lang=&#34;en-us&#34;&gt;
   &lt;head&gt;
