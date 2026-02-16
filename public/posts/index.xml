@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on linar.dev</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on linar.dev</description>
-    <generator>Hugo -- 0.136.2</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 21 Jan 2025 20:24:56 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -13,109 +13,56 @@
       <link>http://localhost:1313/posts/dp-decorator/</link>
       <pubDate>Tue, 21 Jan 2025 20:24:56 +0700</pubDate>
       <guid>http://localhost:1313/posts/dp-decorator/</guid>
-      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-&lt;p&gt;Decorator. Hoorrayyy, it&amp;rsquo;s first article in Design Patterns.&lt;/p&gt;
-&lt;p&gt;I want to describe patterns, use cases, and examples, and nuances.&lt;/p&gt;
-&lt;h1 id=&#34;decorator-pattern&#34;&gt;Decorator Pattern&lt;/h1&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;The &lt;strong&gt;Decorator&lt;/strong&gt; pattern is one of the structural design patterns. It allows us to dynamically extend the behavior of objects without modifying their structure. This pattern is widely used when we need to add responsibilities to objects in a flexible and reusable way.&lt;/p&gt;
-&lt;h2 id=&#34;key-concepts&#34;&gt;Key Concepts&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Abstract component&lt;/strong&gt; – Defines the base interface.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Concrete component&lt;/strong&gt; – A basic implementation of the component.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Decorator (Wrapper)&lt;/strong&gt; – Inherits from the base component and adds new behavior.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;uml-diagram&#34;&gt;UML Diagram&lt;/h2&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;decorator.drawio2.svg&#34; alt=&#34;&#34;  /&gt;
-&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;&#xA;&lt;p&gt;Decorator. Hoorrayyy, it&amp;rsquo;s first article in Design Patterns.&lt;/p&gt;&#xA;&lt;p&gt;I want to describe patterns, use cases, and examples, and nuances.&lt;/p&gt;&#xA;&lt;h1 id=&#34;decorator-pattern&#34;&gt;Decorator Pattern&lt;/h1&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;strong&gt;Decorator&lt;/strong&gt; pattern is one of the structural design patterns. It allows us to dynamically extend the behavior of objects without modifying their structure. This pattern is widely used when we need to add responsibilities to objects in a flexible and reusable way.&lt;/p&gt;&#xA;&lt;h2 id=&#34;key-concepts&#34;&gt;Key Concepts&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Abstract component&lt;/strong&gt; – Defines the base interface.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Concrete component&lt;/strong&gt; – A basic implementation of the component.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Decorator (Wrapper)&lt;/strong&gt; – Inherits from the base component and adds new behavior.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;uml-diagram&#34;&gt;UML Diagram&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/posts/dp-decorator/decorator.drawio2.svg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>All About Async and Threads in Unity (Draft variant)</title>
       <link>http://localhost:1313/posts/all-about-async-and-threads-in-unity/</link>
       <pubDate>Thu, 09 Jan 2025 12:46:38 +0700</pubDate>
       <guid>http://localhost:1313/posts/all-about-async-and-threads-in-unity/</guid>
-      <description>&lt;h1 id=&#34;want-to-know--async-coroutine-nuances&#34;&gt;Want to Know : Async, Coroutine, Nuances&lt;/h1&gt;
-&lt;p&gt;Работа над данной статьей приостановлена, наработки хотел опубликовать.&lt;/p&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Всем привет! Хочу поздравить вас с началом нового цикла статей Хочу Знать;&lt;/p&gt;
-&lt;p&gt;Начнем мы с темы которая набила оскомину во многих местах, часто применяется и вообще, черт бы ногу сломал (кто-то начинает тащить еще и UniRX или другую хуйню),&lt;/p&gt;
-&lt;p&gt;Представляю вашему вниманию Хочу Знать: Async, Coroutine, Threads, Nuances.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Хочу подсветить, что тут акцент я сделаю больше на нюансы и подводные камни, а на базовые моменты оставлю ссылки на хорошие ресурсы.&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;want-to-know--async-coroutine-nuances&#34;&gt;Want to Know : Async, Coroutine, Nuances&lt;/h1&gt;&#xA;&lt;p&gt;Работа над данной статьей приостановлена, наработки хотел опубликовать.&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Всем привет! Хочу поздравить вас с началом нового цикла статей Хочу Знать;&lt;/p&gt;&#xA;&lt;p&gt;Начнем мы с темы которая набила оскомину во многих местах, часто применяется и вообще, черт бы ногу сломал (кто-то начинает тащить еще и UniRX или другую хуйню),&lt;/p&gt;&#xA;&lt;p&gt;Представляю вашему вниманию Хочу Знать: Async, Coroutine, Threads, Nuances.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Хочу подсветить, что тут акцент я сделаю больше на нюансы и подводные камни, а на базовые моменты оставлю ссылки на хорошие ресурсы.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Between The Lines: Vertex Animations</title>
       <link>http://localhost:1313/posts/btl-vertex-animations/</link>
       <pubDate>Sun, 03 Nov 2024 15:09:15 +0700</pubDate>
       <guid>http://localhost:1313/posts/btl-vertex-animations/</guid>
-      <description>&lt;h2 id=&#34;chapter-1-animation-concept&#34;&gt;Chapter 1: Animation concept&lt;/h2&gt;
-&lt;p&gt;Let&amp;rsquo;s start by explaining how animation will work for our UI elements.&lt;/p&gt;
-&lt;p&gt;We are not talking here about transitions/delays and other built-in animation features in UI Toolkit.&lt;/p&gt;
-&lt;p&gt;From previous articles, we have already learnt how to create customisable UI elements. Now it&amp;rsquo;s time to add some dynamism.&lt;/p&gt;
-&lt;p&gt;It is worth noting that animation generation is quite resource-intensive compared to other operations, as it will load the CPU on almost every frame.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;chapter-1-animation-concept&#34;&gt;Chapter 1: Animation concept&lt;/h2&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s start by explaining how animation will work for our UI elements.&lt;/p&gt;&#xA;&lt;p&gt;We are not talking here about transitions/delays and other built-in animation features in UI Toolkit.&lt;/p&gt;&#xA;&lt;p&gt;From previous articles, we have already learnt how to create customisable UI elements. Now it&amp;rsquo;s time to add some dynamism.&lt;/p&gt;&#xA;&lt;p&gt;It is worth noting that animation generation is quite resource-intensive compared to other operations, as it will load the CPU on almost every frame.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Between The Lines: Creating Interfaces Using Vectors</title>
       <link>http://localhost:1313/posts/btl-creating-interface-elements-using-vector-api/</link>
       <pubDate>Tue, 29 Oct 2024 11:05:11 +0700</pubDate>
       <guid>http://localhost:1313/posts/btl-creating-interface-elements-using-vector-api/</guid>
-      <description>&lt;p&gt;In the recent past, I&amp;rsquo;ve talked about &lt;a href=&#34;https://dtf.ru/gamedev/2215784-razdelyaem-i-vlastvuem-nad-interfeisami-v-unity&#34;&gt;how you can create your own custom elements through mash generation&lt;/a&gt;, it will be useful to read to understand many aspects of this article.&lt;/p&gt;
-&lt;p&gt;And today, we will be creating custom elements for interfaces, but using the &lt;strong&gt;VectorApi&lt;/strong&gt; in the &lt;strong&gt;UI Toolkit&lt;/strong&gt; of the &lt;strong&gt;Unity&lt;/strong&gt; engine.&lt;/p&gt;
-&lt;p&gt;After reading this article you will learn:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;What is &lt;strong&gt;painter2D&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;How to create elements using it&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;How to surprise your colleagues with your knowledge of interface creation&lt;/p&gt;</description>
+      <description>&lt;p&gt;In the recent past, I&amp;rsquo;ve talked about &lt;a href=&#34;https://dtf.ru/gamedev/2215784-razdelyaem-i-vlastvuem-nad-interfeisami-v-unity&#34;&gt;how you can create your own custom elements through mash generation&lt;/a&gt;, it will be useful to read to understand many aspects of this article.&lt;/p&gt;&#xA;&lt;p&gt;And today, we will be creating custom elements for interfaces, but using the &lt;strong&gt;VectorApi&lt;/strong&gt; in the &lt;strong&gt;UI Toolkit&lt;/strong&gt; of the &lt;strong&gt;Unity&lt;/strong&gt; engine.&lt;/p&gt;&#xA;&lt;p&gt;After reading this article you will learn:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;What is &lt;strong&gt;painter2D&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;How to create elements using it&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;How to surprise your colleagues with your knowledge of interface creation&lt;/p&gt;</description>
     </item>
     <item>
       <title>Between The Lines: Create Interfaces Using Mesh</title>
       <link>http://localhost:1313/posts/btl-create-interfaces-using-mesh/</link>
       <pubDate>Mon, 28 Oct 2024 11:12:23 +0700</pubDate>
       <guid>http://localhost:1313/posts/btl-create-interfaces-using-mesh/</guid>
-      <description>&lt;h1 id=&#34;divide-and-conquer-user-interface-in-unity&#34;&gt;Divide and conquer User Interface in Unity&lt;/h1&gt;
-&lt;p&gt;I tell you how to create custom UI elements through Mesh creation using &lt;strong&gt;Unity&lt;/strong&gt; and &lt;strong&gt;UI Toolkit&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;what-do-we-do&#34;&gt;What do we do?&lt;/h2&gt;
-&lt;p&gt;Within the framework of this article, we will analyze the possibilities of generating custom UI elements using the &lt;strong&gt;UI Toolkit&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;First, we&amp;rsquo;ll take a closer look at creating a triangle based on mash generation, and second - a gradient rhombus!&lt;/p&gt;
-&lt;h2 id=&#34;chapter-1-mesh-and-triangle&#34;&gt;Chapter 1: Mesh and Triangle!&lt;/h2&gt;
-&lt;p&gt;Within this chapter, let&amp;rsquo;s look at how to make a custom triangle element, as well as tell you in general how this system works.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;divide-and-conquer-user-interface-in-unity&#34;&gt;Divide and conquer User Interface in Unity&lt;/h1&gt;&#xA;&lt;p&gt;I tell you how to create custom UI elements through Mesh creation using &lt;strong&gt;Unity&lt;/strong&gt; and &lt;strong&gt;UI Toolkit&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-do-we-do&#34;&gt;What do we do?&lt;/h2&gt;&#xA;&lt;p&gt;Within the framework of this article, we will analyze the possibilities of generating custom UI elements using the &lt;strong&gt;UI Toolkit&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;First, we&amp;rsquo;ll take a closer look at creating a triangle based on mash generation, and second - a gradient rhombus!&lt;/p&gt;&#xA;&lt;h2 id=&#34;chapter-1-mesh-and-triangle&#34;&gt;Chapter 1: Mesh and Triangle!&lt;/h2&gt;&#xA;&lt;p&gt;Within this chapter, let&amp;rsquo;s look at how to make a custom triangle element, as well as tell you in general how this system works.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Reducing UI chaos: MVP pattern</title>
       <link>http://localhost:1313/posts/reducing-ui-chaos-mvp-pattern/</link>
       <pubDate>Sun, 27 Oct 2024 15:32:11 +0700</pubDate>
       <guid>http://localhost:1313/posts/reducing-ui-chaos-mvp-pattern/</guid>
-      <description>Separating code to rule in interface development!</description>
+      <description>&lt;h2 id=&#34;general-information&#34;&gt;General Information&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;MVP&lt;/strong&gt; (Model, View, Presenter) is a UI design pattern from the MV* family (which also includes MVC and MVVM).&lt;/p&gt;&#xA;&lt;p&gt;These approaches are characterized by a strict separation of logic, data, and visual representations, making it easy to scale and develop interfaces.&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re involved in interface creation and programming logic, you&amp;rsquo;ve probably heard something about them.&lt;/p&gt;&#xA;&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;&#xA;&lt;p&gt;An important question to ask when starting to use a particular design pattern is - &lt;strong&gt;&amp;ldquo;Why? What will it bring?&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello World Zenject Leoecs</title>
       <link>http://localhost:1313/posts/hello-world-zenject-leoecs/</link>
       <pubDate>Sun, 27 Oct 2024 14:56:20 +0700</pubDate>
       <guid>http://localhost:1313/posts/hello-world-zenject-leoecs/</guid>
-      <description>&lt;h1 id=&#34;how-to-write-hello-world-using-leoecs--zenject&#34;&gt;How to write Hello World using LeoEcs &amp;amp; Zenject&lt;/h1&gt;
-&lt;h2 id=&#34;preparation&#34;&gt;Preparation&lt;/h2&gt;
-&lt;p&gt;Firstly, we need to install &lt;a href=&#34;https://github.com/modesttree/Zenject&#34;&gt;Zenject&lt;/a&gt; and &lt;a href=&#34;https://github.com/Leopotam/ecs&#34;&gt;LeoEcs&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;LeoEcs has two versions, one based on structures and one based on classes.
-Within the framework of this tutorial, it makes no difference which one to use, I will use the version on structures.&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-&lt;p&gt;After installation, we need to create &lt;strong&gt;Scene Context&lt;/strong&gt; in our Scene.
-Right Click inside the Hierarchy tab and select &lt;code&gt;Zenject -&amp;gt; Scene Context&lt;/code&gt;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;how-to-write-hello-world-using-leoecs--zenject&#34;&gt;How to write Hello World using LeoEcs &amp;amp; Zenject&lt;/h1&gt;&#xA;&lt;h2 id=&#34;preparation&#34;&gt;Preparation&lt;/h2&gt;&#xA;&lt;p&gt;Firstly, we need to install &lt;a href=&#34;https://github.com/modesttree/Zenject&#34;&gt;Zenject&lt;/a&gt; and &lt;a href=&#34;https://github.com/Leopotam/ecs&#34;&gt;LeoEcs&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;LeoEcs has two versions, one based on structures and one based on classes.&#xA;Within the framework of this tutorial, it makes no difference which one to use, I will use the version on structures.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;&#xA;&lt;p&gt;After installation, we need to create &lt;strong&gt;Scene Context&lt;/strong&gt; in our Scene.&#xA;Right Click inside the Hierarchy tab and select &lt;code&gt;Zenject -&amp;gt; Scene Context&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>My First Post</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Fri, 25 Oct 2024 13:34:00 +0700</pubDate>
       <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello, World!&lt;/h1&gt;
-&lt;p&gt;Welcome to my blog!&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m Linar, a Unity Developer with a passion for creating engaging and optimized gaming experiences.&lt;/p&gt;
-&lt;p&gt;Here, I&amp;rsquo;ll be sharing insights, tips, and my journey in the world of game development.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Stay tuned for updates, technical deep dives, and everything in between&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Let’s create something amazing together!&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello, World!&lt;/h1&gt;&#xA;&lt;p&gt;Welcome to my blog!&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m Linar, a Unity Developer with a passion for creating engaging and optimized gaming experiences.&lt;/p&gt;&#xA;&lt;p&gt;Here, I&amp;rsquo;ll be sharing insights, tips, and my journey in the world of game development.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Stay tuned for updates, technical deep dives, and everything in between&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Let’s create something amazing together!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

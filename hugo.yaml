@@ -1,6 +1,6 @@
 baseURL: "https://linzer0.github.io/"
 title: linar.dev 
-paginate: 5
+pagination.pagerSize: 5
 theme: PaperMod
 
 enableRobotsTXT: true
