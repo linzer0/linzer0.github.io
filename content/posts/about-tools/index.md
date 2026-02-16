@@ -259,6 +259,11 @@ public class PrefabConfig : ScriptableObject
 
 ```
 
+
+# TODO
+1. Добавить скриншоты к MenuItems
+2. 
+
 # 2. Базовые инструменты Unity Editor
 
 MenuItem: быстрый доступ к действиям, которые часто повторяются.
