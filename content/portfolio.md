@@ -2,11 +2,50 @@
 title: "Portfolio 🕹️"
 layout: "portfolio"
 url: "/portfolio/"
-summary: portfolio 
+summary: portfolio
 
 ---
 
 Commercial projects
+
+-------------------
+
+[Berserk Heroes Online](https://ru.4game.ru/berserk/)
+
+Berserk Heroes Online is a dynamic card duel that has gained a new dimension. 
+Recruit creatures, use spells, and equip equipment to ensure your dominance in battle. 
+
+**The first one to reduce the enemy hero's health to zero wins.**
+
+-------------------
+
+
+### Technical Stacks
+
+* Unity Engine, C#, Shared Client-Server, ECS.
+
+{{< gallery folder="/bho-gallery" >}}
+
+-------------------
+
+-------------------
+
+[Thesia: Isekai World RPG](https://play.google.com/store/apps/details?id=com.lategame.thesia)
+
+Thesia: Isekai World RPG
+Step into the enchanting world of Thesia: Isekai World, a captivating anime RPG that blends strategic battles, hero collecting, and breathtaking storytelling. 
+Explore a crumbling isekai world filled with danger, beauty, and mystery. 
+Unite Thesia's diverse anime heroes from different dimensions and lead them to victory in this epic role-playing game.
+
+-------------------
+
+
+### Technical Stacks
+
+* Unity Engine, C#, Shared Client-Server, ECS.
+
+{{< gallery folder="/tiw-gallery" >}}
+
 -------------------
 
 [Heroes of Artadis](https://play.google.com/store/apps/details?id=com.BulatZavgarov.HeroicBattles&hl=en)
@@ -18,24 +57,24 @@ About my results on this project:
 
 ### Game Logic
 
-*   Implemented 20+ daily & seasonal quests/challenges;
-*   Developed 30+ unique character/hero abilities;
+* Implemented 20+ daily & seasonal quests/challenges;
+* Developed 30+ unique character/hero abilities;
 
 ### UI Development
 
-*   Developed extensive logic for player profile customization (avatar, titles, banners) and dynamic Addressable loading;
-*   Organized scalable UI process for Figma & Unity;
-*   Implemented plurals support for localization;
+* Developed extensive logic for player profile customization (avatar, titles, banners) and dynamic Addressable loading;
+* Organized scalable UI process for Figma & Unity;
+* Implemented plurals support for localization;
 
 ### Tooling
 
-*   Created a core scenario tester for QA departments (including creation, recording, running, and result output);
-*   Developed a tool for fast creation and integration of Battle Pass challenges;
-*   Created Code Templates for faster game logic writing;
+* Created a core scenario tester for QA departments (including creation, recording, running, and result output);
+* Developed a tool for fast creation and integration of Battle Pass challenges;
+* Created Code Templates for faster game logic writing;
 
 ### Technical Stacks
 
-*   Unity Engine, C#, CRP, DOTS, UI Toolkit
+* Unity Engine, C#, CRP, DOTS, UI Toolkit
 
 {{< gallery folder="/hoa-gallery" >}}
 
@@ -51,40 +90,40 @@ About my results on this project:
 
 ### Game Logic
 
-*   Shipped game from scratch to Soft Launch;
-*   Developed usable items, skills mechanics;
-*   Implemented 25+ unique character & hero skills;
-*   Shop and Unity IAP integration
+* Shipped game from scratch to Soft Launch;
+* Developed usable items, skills mechanics;
+* Implemented 25+ unique character & hero skills;
+* Shop and Unity IAP integration
 
 ### UI Development
 
-*   Created 50% of all UI in the game (including HUD, Shop, Collections)
-*   Designed an extensible architecture [MVP](https://github.com/linzer0/interface-pattern-mvp)
+* Created 50% of all UI in the game (including HUD, Shop, Collections)
+* Designed an extensible architecture [MVP](https://github.com/linzer0/interface-pattern-mvp)
 
 ### Client-Server
 
-*   Designed and implemented a hybrid client-server relationship based on clear .NET (same for client and server)
-*   Decreased network traffic by 50% (optimized GET/POST requests)
+* Designed and implemented a hybrid client-server relationship based on clear .NET (same for client and server)
+* Decreased network traffic by 50% (optimized GET/POST requests)
 
 ### Optimization
 
-*   FPS optimization (from 30 to stable 60) for mobile devices
-*   Memory traffic optimization (from ~10 KB per frame to almost zero)
-*   Added pooling for characters, projectiles, and other objects
+* FPS optimization (from 30 to stable 60) for mobile devices
+* Memory traffic optimization (from ~10 KB per frame to almost zero)
+* Added pooling for characters, projectiles, and other objects
 
 ### Process Management
 
-*   Supervised processes like sprint planning, sprint finishing, and retrospective
-*   Assisted in transitioning from waterfall planning to agile methodology
+* Supervised processes like sprint planning, sprint finishing, and retrospective
+* Assisted in transitioning from waterfall planning to agile methodology
 
 ### Other Contributions
 
-*   Assisted the CTO with technical interviews for the Unity Developer position
-*   Implemented Facebook, Google Play, Firebase, and other SDKs
+* Assisted the CTO with technical interviews for the Unity Developer position
+* Implemented Facebook, Google Play, Firebase, and other SDKs
 
 ### Technical Stacks
 
-*   Unity Engine, C#, URP, uGUI
+* Unity Engine, C#, URP, uGUI
 
 {{< gallery folder="/mergepunk-gallery" >}}
 
